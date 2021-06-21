@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "billy-b"
+    "name": "Billy B | Educational Song and Dance Man"
   },
   "api": {
     "projectId": "dp45lesu",
@@ -25,6 +25,14 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./components/logo.js"
     }
   ]
 }
