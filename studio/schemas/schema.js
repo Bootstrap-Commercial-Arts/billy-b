@@ -9,6 +9,7 @@ import seoSettings from './objects/seoSettings'
 
 import shows from './documents/shows'
 import lyrics from './documents/lyrics'
+import albums from './documents/albums'
 
 import blockContent from './objects/blockContent'
 import guides from './objects/guides'
@@ -24,6 +25,7 @@ export default createSchema({
     seoSettings,
     shows,
     lyrics,
+    albums,
     guides,
     blockContent
   ]),
