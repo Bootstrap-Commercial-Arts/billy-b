@@ -1,0 +1,4 @@
+[[redirects]]
+  from = '/desk'
+  to = '/'
+  status = 200
