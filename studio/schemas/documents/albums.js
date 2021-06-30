@@ -12,6 +12,16 @@ export default {
       type: 'string'
     },
     {
+      name: 'albumCover',
+      title: 'Album Cover',
+      type: 'image',
+    },
+    {
+      name: 'purchaseUrl',
+      title: 'Album Purchase Url',
+      type: 'url',
+    },
+    {
       name: 'songs',
       title: 'Songs',
       type: 'array',

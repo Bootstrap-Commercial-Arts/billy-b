@@ -18,5 +18,3 @@ export default {
     },
   ],
 }
-
-// TODO: ref in shows
