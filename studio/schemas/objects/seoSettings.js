@@ -21,5 +21,11 @@ export default {
       type: 'image',
       description: 'The site wide Social Media Preview Card default.',
     },
+    {
+      name: 'previewImageAlt',
+      title: 'SEO Preview Image Alternative Text',
+      type: 'string',
+      description: 'Text to be read by screen readers, and shown if image fails to load.'
+    }
   ],
 }
