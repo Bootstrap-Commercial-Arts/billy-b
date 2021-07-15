@@ -11,6 +11,7 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@rollup/plugin-graphql": "^1.0.0",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -25,5 +26,16 @@
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@sanity/base": "^2.12.2",
+    "@sanity/client": "^2.11.0",
+    "@sanity/image-url": "^0.140.22",
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.4.0",
+    "groq": "^2.2.6",
+    "node-fetch": "^2.6.1",
+    "sanity-codegen": "^0.9.4",
+    "svelte-seo": "^1.2.1"
+  }
 }
