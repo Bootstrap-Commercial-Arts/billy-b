@@ -8,14 +8,14 @@ import HamburgerIcon from "./ui/hamburger";
 const Header = () => {
   return (
     <div className="flex flex-row bg-lightblue">
-      <div className="bg-darkblue flex-1">
+      <div className="bg-darkblue flex-1 pl-4 pt-2">
         <Image src={Logo} width={72} height={72} />
       </div>
-      <div className=" flex-1">
+      <div className="flex-1 pl-2">
         {/* <PlayButtonIcon />
           <span className="uppercase">videos</span> */}
         <PlayButtonIcon />
-        <button className="uppercase  border-white px-2  border-2 text-white">
+        <button className="uppercase mt-1 border-white px-2  border-2 text-white">
           videos
         </button>
       </div>
@@ -23,7 +23,7 @@ const Header = () => {
         {/* <ShoppingCartIcon />
           <span className="uppercase">store</span> */}
         <ShoppingCartIcon />
-        <button className="uppercase  border-white px-2 border-2 text-white">
+        <button className="uppercase  mt-1 border-white px-2 border-2 text-white">
           store
         </button>
       </div>

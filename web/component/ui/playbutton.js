@@ -5,7 +5,7 @@ const PlayButton = () => {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12"
+        className="h-8 w-8 ml-6 mt-2 text-white"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
