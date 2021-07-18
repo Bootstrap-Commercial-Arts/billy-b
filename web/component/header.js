@@ -7,23 +7,29 @@ import HamburgerIcon from "./ui/hamburger";
 
 const Header = () => {
   return (
-    <div className="flex flex-row flex-1 width-full">
-      <div className="bg-darkblue">
+    <div className="flex flex-row bg-lightblue">
+      <div className="bg-darkblue flex-1">
         <Image src={Logo} width={72} height={72} />
       </div>
-      <ul className="flex flex-row bg-lightblue">
-        <li>
-          <PlayButtonIcon />
-          <span className="uppercase">videos</span>
-        </li>
-        <li>
-          <ShoppingCartIcon />
-          <span className="uppercase">store</span>
-        </li>
-        <li className="bg-darkblue">
-          <HamburgerIcon />
-        </li>
-      </ul>
+      <div className=" flex-1">
+        {/* <PlayButtonIcon />
+          <span className="uppercase">videos</span> */}
+        <PlayButtonIcon />
+        <button className="uppercase  border-white px-2  border-2 text-white">
+          videos
+        </button>
+      </div>
+      <div className=" flex-1">
+        {/* <ShoppingCartIcon />
+          <span className="uppercase">store</span> */}
+        <ShoppingCartIcon />
+        <button className="uppercase  border-white px-2 border-2 text-white">
+          store
+        </button>
+      </div>
+      <div className="bg-darkblue flex-1">
+        <HamburgerIcon />
+      </div>
     </div>
   );
 };
