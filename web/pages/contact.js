@@ -6,7 +6,7 @@ import contactimage from "../public/image/Contact-Hero.jpg";
 
 const Contact = () => {
   return (
-    <div className="bg-darkblue ">
+    <div className="bg-mediumblue ">
       <Head>
         <title>Billy B Contact Page</title>
       </Head>
