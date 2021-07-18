@@ -24,7 +24,7 @@ const Lyrics = ({ data }) => {
           speak English as a second language, or if you just want to sing along!
         </p>
       </div>
-      <div className="grid grid-cols-2 w-10/12 gap-2 ml-auto mr-auto mt-8 lg:grid-cols-3 xl:grid-cols-4 mt-6 lg:gap-8 border ">
+      <div className="grid grid-cols-2 w-10/12 gap-2 ml-auto mr-auto mt-8 lg:grid-cols-3 xl:grid-cols-4 mt-6 lg:gap-8 ">
         {data.map((dt, index) => (
           <div key={index}>
             <img
