@@ -8,7 +8,6 @@ function Home() {
       <Head>
         <title>Billy B</title>
       </Head>
-      <Layout />
       <HomePage />
     </div>
   );

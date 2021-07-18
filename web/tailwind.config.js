@@ -12,6 +12,7 @@ module.exports = {
                 darkpink: "#b44ac4",
                 lightgreen: "#63ce63",
                 darkgreen: "#01a902",
+                mediumgreen: "#0bb10c",
             },
         },
     },

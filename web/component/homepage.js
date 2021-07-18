@@ -126,6 +126,18 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+
+      <div className="bg-darkblue py-8 ">
+        <p className="w-9/12 ml-auto mr-auto text-white text-center">
+          Have a question, comment, or drawing you want to share with Billy B?
+          Use the contact form to reach out directly to him.
+        </p>
+        <div className="text-center mt-4">
+          <button className="bg-lightblue px-8 rounded-full ml-auto mr-auto">
+            Contact Billy B.
+          </button>
+        </div>
+      </div>
     </Fragment>
   );
 };
