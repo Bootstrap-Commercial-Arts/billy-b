@@ -2,11 +2,28 @@ import React from "react";
 import Head from "next/head";
 import { sanityClient } from "../lib/sanity";
 import imageUrlBuilder from "@sanity/image-url";
+import BlockContent from "@sanity/block-content-to-react";
 
 const builder = imageUrlBuilder(sanityClient);
 
+const serializers = {
+  types: {
+    code: (props) => (
+      <pre data-language={props.node.language}>
+        <code>{props.node.code}</code>
+      </pre>
+    ),
+  },
+};
+
 const Album = ({ data }) => {
   console.log(data);
+  const songs = data.map((i) => i.songs);
+  const lyric = songs[0];
+  console.log("lyric", lyric);
+  const item = lyric.map((i) => i.lyricContent);
+  console.log("item", item);
+  const result = item[0];
   return (
     <div className="bg-mediumblue">
       <Head>
@@ -35,13 +52,22 @@ const Album = ({ data }) => {
           Apple Music
         </button>
       </div>
+      <BlockContent
+        blocks={result}
+        serializers={serializers}
+        className="w-9/12 ml-auto mr-auto mt-12 leading-8 pb-12"
+      />
     </div>
   );
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "albums"]';
-  const data = await sanityClient.fetch(query);
+  const data = await sanityClient.fetch(`
+        *[_type == 'albums']{
+            ...,
+            'songs': songs[] ->
+        }
+  `);
 
   console.log("getServerSideProps", data);
   return {
