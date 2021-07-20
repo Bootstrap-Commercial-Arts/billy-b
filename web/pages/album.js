@@ -17,13 +17,11 @@ const serializers = {
 };
 
 const Album = ({ data }) => {
-  console.log(data);
   const songs = data.map((i) => i.songs);
   const lyric = songs[0];
-  console.log("lyric", lyric);
   const item = lyric.map((i) => i.lyricContent);
-  console.log("item", item);
   const result = item[0];
+
   return (
     <div className="bg-mediumblue">
       <Head>

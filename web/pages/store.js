@@ -37,7 +37,7 @@ const Store = ({ data }) => {
               {dt.albumName}
             </p>
             <p className="text-white">${dt.albumPrice}</p>
-            <button className=" mt-4 shadow-2xl py-2  mb-8 w-32 px-4 rounded-full uppercase bg-lightyellow">
+            <button className="mt-4 shadow-2xl py-2  mb-8 w-32 px-4 rounded-full uppercase bg-lightyellow">
               Purchase
             </button>
           </div>
