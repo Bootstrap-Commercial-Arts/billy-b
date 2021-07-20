@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../public/image/logo.png";
 import PlayButtonIcon from "./ui/playbutton";
 import ShoppingCartIcon from "./ui/shoppingcart";
@@ -22,7 +23,11 @@ const Header = () => {
         <div className="flex-1 pl-2">
           {/* <PlayButtonIcon />
           <span className="uppercase">videos</span> */}
-          <PlayButtonIcon />
+          <Link href="/store">
+            <a href="/store">
+              <PlayButtonIcon />
+            </a>
+          </Link>
           <button className="uppercase mt-1 border-white px-2  border-2 text-white">
             videos
           </button>

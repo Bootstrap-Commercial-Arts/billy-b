@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { sanityClient } from "../lib/sanity";
+import { client } from "../lib/shopify";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
