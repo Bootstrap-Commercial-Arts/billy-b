@@ -16,19 +16,21 @@ function Home() {
 }
 
 // web/pages/index.js
-// console.log(
-//   "process.env.NEXT_PUBLIC_SHOPIFY_URL",
-//   process.env.NEXT_PUBLIC_SHOPIFY_URL
-// );
-// console.log("process.env.NEXT_PUBLIC_TOKEN", process.env.NEXT_PUBLIC_TOKEN);
+console.log(
+  "process.env.NEXT_PUBLIC_SHOPIFY_URL",
+  process.env.NEXT_PUBLIC_SHOPIFY_URL
+);
+console.log("process.env.NEXT_PUBLIC_TOKEN", process.env.NEXT_PUBLIC_TOKEN);
+
 // export async function getStaticProps() {
 //   const graphQLClient = new GraphQLClient(process.env.NEXT_PUBLIC_SHOPIFY_URL, {
 //     headers: {
 //       "X-Shopify-Storefront-Access-Token": process.env.NEXT_PUBLIC_TOKEN,
 //     },
 //   });
+//   // I added the word query to line 9 below. It was missing in the code you shared before. Try that and see how you go.
 //   const query = gql`
-//     {
+//     query {
 //       collectionByHandle(handle: "albums") {
 //         id
 //         title
@@ -58,14 +60,11 @@ function Home() {
 //       }
 //     }
 //   `;
-
 //   const res = await graphQLClient.request(query);
-
 //   if (res.errors) {
 //     console.log(JSON.stringify(res.errors, null, 2));
 //     throw Error("Unable to retrieve Shopify Products. Please check logs");
 //   }
-
 //   return {
 //     props: {
 //       data: {
