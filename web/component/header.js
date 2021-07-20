@@ -4,6 +4,8 @@ import Logo from "../public/image/logo.png";
 import PlayButtonIcon from "./ui/playbutton";
 import ShoppingCartIcon from "./ui/shoppingcart";
 import HamburgerIcon from "./ui/hamburger";
+import MenuIcon from "./menu";
+import MenuItems from "./ui/menuitems";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -34,26 +36,17 @@ const Header = () => {
           </button>
         </div>
         <div className="bg-darkblue flex-1">
-          <button
+          {/* <button
             onClick={menuToggleHandler}
             className="absolute right-0 mr-8 -mt-8 lg:hidden"
           >
             <HamburgerIcon />
-          </button>
+          </button> */}
         </div>
       </div>
-      <ul
-        className={`
-            flex flex-col w-4/5 ml-auto mr-auto text-center mt-4 lg:flex lg:flex-row lg:absolute lg:w-2/3 lg:right-0 lg:justify-around lg:mr-14 lg: -mt-8
-            lg:flex ${open ? "block" : "hidden"}
-          `}
-      >
-        <li>Home</li>
-        <li>Lyrics</li>
-        <li>Teacher Guide</li>
-        <li>Contact</li>
-        <li>About</li>
-      </ul>
+      <MenuIcon>
+        <MenuItems />
+      </MenuIcon>
     </>
   );
 };
