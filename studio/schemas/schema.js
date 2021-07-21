@@ -11,9 +11,19 @@ import shows from "./documents/shows";
 import lyrics from "./documents/lyrics";
 import albums from "./documents/albums";
 import contact from "./documents/contact";
+import product from "./documents/product";
+import collection from "./documents/collection";
 
 import blockContent from "./objects/blockContent";
 import guides from "./objects/guides";
+import { saneShopify } from "@sane-shopify/sanity-plugin";
+
+const saneShopifyConfig = {
+    product,
+    collection,
+};
+
+const saneShopifyTypes = saneShopify(saneShopifyConfig);
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,5 +40,6 @@ export default createSchema({
         albums,
         guides,
         blockContent,
+        saneShopifyTypes,
     ]),
 });

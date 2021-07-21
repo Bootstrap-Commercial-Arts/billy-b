@@ -904,6 +904,18 @@
   version "0.7.5"
   resolved "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz"
 
+"@good-idea/leaky-bucket@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.npmjs.org/@good-idea/leaky-bucket/-/leaky-bucket-3.1.2.tgz#f3911d9db3bf014c242a2cee1a01ace8c01b46b6"
+  integrity sha512-oyx4p5GcEYC2+Ol1JxaEb3cx5doDpDJfdPD083UCs2torlQoEllywCZzPlwTC5RK8JmR80fjQTM7JuLbt4WF3g==
+  dependencies:
+    debug "^4.1.1"
+
+"@good-idea/unwind-edges@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.npmjs.org/@good-idea/unwind-edges/-/unwind-edges-1.5.3.tgz#d9a62318a70a49d5657774dabf593e6e6575dfdd"
+  integrity sha512-kDZCC+ZwO2fI+iol55N2Yn3H28NsvNv+ocnxQ3es3wDpvlYSUuXWomTlS8Fi5E8TyBiwOv6rVgZOiL48d8OsTA==
+
 "@hot-loader/react-dom@^16.9.0-4.12.11":
   version "16.14.0"
   resolved "https://registry.npmjs.org/@hot-loader/react-dom/-/react-dom-16.14.0.tgz#3cfc64e40bb78fa623e59b582b8f09dcdaad648a"
@@ -972,6 +984,40 @@
 "@rexxars/eventsource-polyfill@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@rexxars/eventsource-polyfill/-/eventsource-polyfill-1.0.0.tgz"
+
+"@sane-shopify/sanity-plugin@^0.22.2":
+  version "0.22.2"
+  resolved "https://registry.npmjs.org/@sane-shopify/sanity-plugin/-/sanity-plugin-0.22.2.tgz#b97604d56d252c71145bb57db281e8c43740408d"
+  integrity sha512-OUCPuxZhY98VhhHO+KY+RiaJTpCuuB/UFh/UUmRrhQfsPVWF+tNzpakH/5XUYHrvFHpjMJMWy0eAiH9UTLkhvQ==
+  dependencies:
+    "@good-idea/unwind-edges" "^1.5.3"
+    "@sane-shopify/sync-utils" "^0.22.2"
+    "@sane-shopify/types" "^0.22.2"
+    lodash "^4.17.21"
+    react-icons "^4.2.0"
+
+"@sane-shopify/sync-utils@^0.22.2":
+  version "0.22.2"
+  resolved "https://registry.npmjs.org/@sane-shopify/sync-utils/-/sync-utils-0.22.2.tgz#d818282c2a02c140fbae320df40a2577ed870876"
+  integrity sha512-H52oCXtgFCqqX1ZwEFR7RoBeH7w1v9KcZU9WWSkkT0lBBd4BPiw4H/29AH6c8quzuCmkErdlj0Ibh9XfxHWS/Q==
+  dependencies:
+    "@good-idea/leaky-bucket" "^3.1.2"
+    "@good-idea/unwind-edges" "^1.5.3"
+    "@sane-shopify/types" "^0.22.2"
+    cross-fetch "^3.1.4"
+    debug "^4.3.1"
+    deepmerge "^4.2.2"
+    es6-promise "^4.2.8"
+    graphql-tag "^2.11.0"
+    isomorphic-fetch "^3.0.0"
+    p-queue "^6.6.2"
+    uuid "^8.3.2"
+    xstate "^4.18.0"
+
+"@sane-shopify/types@^0.22.2":
+  version "0.22.2"
+  resolved "https://registry.npmjs.org/@sane-shopify/types/-/types-0.22.2.tgz#5582571c4ca9997d78832a86aa9874da96a4fefb"
+  integrity sha512-EwgqWmrOAMcmO3l93dZRaPcFBYLUJivspvp2SyXSnL/9BIP/qPee+JVi7ZD1BKYJGSq9rHB+v5ovEQB2xt6vOQ==
 
 "@sanity/asset-utils@^1.1.2":
   version "1.1.5"
@@ -2899,9 +2945,10 @@ create-react-class@^15.6.0:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-cross-fetch@^3.0.4:
+cross-fetch@^3.0.4, cross-fetch@^3.1.4:
   version "3.1.4"
-  resolved "https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.1.4.tgz"
+  resolved "https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
   dependencies:
     node-fetch "2.6.1"
 
@@ -3199,6 +3246,13 @@ debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "2.1.2"
 
+debug@^4.3.1:
+  version "4.3.2"
+  resolved "https://registry.npmjs.org/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
+  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
+  dependencies:
+    ms "2.1.2"
+
 decamelize@^1.0.0, decamelize@^1.1.1:
   version "1.2.0"
   resolved "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz"
@@ -3234,6 +3288,11 @@ deep-sort-object@^1.0.1:
   resolved "https://registry.npmjs.org/deep-sort-object/-/deep-sort-object-1.0.2.tgz"
   dependencies:
     is-plain-object "^2.0.1"
+
+deepmerge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.npmjs.org/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
+  integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
 define-properties@^1.1.3:
   version "1.1.3"
@@ -3525,6 +3584,11 @@ es6-map@^0.1.3:
     es6-symbol "~3.1.1"
     event-emitter "~0.3.5"
 
+es6-promise@^4.2.8:
+  version "4.2.8"
+  resolved "https://registry.npmjs.org/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
 es6-promisify@^6.0.0:
   version "6.1.1"
   resolved "https://registry.npmjs.org/es6-promisify/-/es6-promisify-6.1.1.tgz"
@@ -3630,6 +3694,11 @@ event-emitter@~0.3.5:
   dependencies:
     d "1"
     es5-ext "~0.10.14"
+
+eventemitter3@^4.0.4:
+  version "4.0.7"
+  resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
 events@^3.0.0:
   version "3.3.0"
@@ -4252,6 +4321,13 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.6"
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.6.tgz"
 
+graphql-tag@^2.11.0:
+  version "2.12.5"
+  resolved "https://registry.npmjs.org/graphql-tag/-/graphql-tag-2.12.5.tgz#5cff974a67b417747d05c8d9f5f3cb4495d0db8f"
+  integrity sha512-5xNhP4063d16Pz3HBtKprutsPrmHZi5IdUGOWRxA2B6VF7BIRGOHZ5WQvDmJXZuPcBg7rYwaFxvQYjqkSdR3TQ==
+  dependencies:
+    tslib "^2.1.0"
+
 groq-js@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/groq-js/-/groq-js-0.2.0.tgz"
@@ -4867,6 +4943,14 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
 
+isomorphic-fetch@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz#0267b005049046d2421207215d45d6a262b8b8b4"
+  integrity sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==
+  dependencies:
+    node-fetch "^2.6.1"
+    whatwg-fetch "^3.4.1"
+
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz"
@@ -5231,9 +5315,10 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
 
-lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.3.0:
+lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.3.0:
   version "4.17.21"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.1.0, log-symbols@^2.2.0:
   version "2.2.0"
@@ -5553,7 +5638,7 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz"
 
-node-fetch@2.6.1:
+node-fetch@2.6.1, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.1.tgz"
 
@@ -5819,6 +5904,21 @@ p-map@^1.2.0:
 p-queue@^2.3.0:
   version "2.4.2"
   resolved "https://registry.npmjs.org/p-queue/-/p-queue-2.4.2.tgz"
+
+p-queue@^6.6.2:
+  version "6.6.2"
+  resolved "https://registry.npmjs.org/p-queue/-/p-queue-6.6.2.tgz#2068a9dcf8e67dd0ec3e7a2bcb76810faa85e426"
+  integrity sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==
+  dependencies:
+    eventemitter3 "^4.0.4"
+    p-timeout "^3.2.0"
+
+p-timeout@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.npmjs.org/p-timeout/-/p-timeout-3.2.0.tgz#c7e17abc971d2a7962ef83626b35d635acf23dfe"
+  integrity sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==
+  dependencies:
+    p-finally "^1.0.0"
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -8463,9 +8563,10 @@ uuid@^3.1.0, uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
 
-uuid@^8.0.0:
+uuid@^8.0.0, uuid@^8.3.2:
   version "8.3.2"
-  resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
+  resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
@@ -8604,6 +8705,11 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.5:
   dependencies:
     iconv-lite "0.4.24"
 
+whatwg-fetch@^3.4.1:
+  version "3.6.2"
+  resolved "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
+  integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
+
 whatwg-mimetype@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/whatwg-mimetype/-/whatwg-mimetype-2.3.0.tgz"
@@ -8697,6 +8803,11 @@ xmlchars@^2.1.1:
 xregexp@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/xregexp/-/xregexp-2.0.0.tgz"
+
+xstate@^4.18.0:
+  version "4.23.0"
+  resolved "https://registry.npmjs.org/xstate/-/xstate-4.23.0.tgz#af0bd09c726dccedf16f8ba30d0d1efff7af5207"
+  integrity sha512-YIKb7thsDfpb6ooWJJuj+UnNZq923dG264zfpS2/vi4dkZz41ugO0ktC6QCBDeMfH8LBHhhqZ06sR4AYgWWnWg==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
