@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import storeimage from "../public/image/Store-Hero.jpg";
 import { sanityClient } from "../lib/sanity";
-import { client } from "../lib/shopify";
+import { client, addProductToCart } from "../lib/shopify";
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -13,14 +13,26 @@ const Store = ({ products, albums }) => {
   console.log("albums", albums);
 
   const [count, setCount] = useState(1);
+  const [selectedVariant, setSelectedVariant] = useState("");
   const handleCount = (value) =>
     !(count === 0 && value === -1) ? setCount(count + value) : count;
 
-  const checkoutHandler = (prodId) => {
-    console.log(prodId);
-    console.log(count);
-    const result = client.checkout.create();
-    console.log(result);
+  const addToCart = async (prodId) => {
+    try {
+      if (count < 1) return;
+      const variants = products.map((i) => i.variants);
+      const [items] = variants;
+      const variantIdItem = items.map((i) => i.id);
+      const [variantId] = variantIdItem;
+      addProductToCart([
+        {
+          variantId,
+          quantity: Number(count),
+        },
+      ]);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -103,10 +115,10 @@ const Store = ({ products, albums }) => {
               </button>
             </div>
             <button
-              onClick={(e) => checkoutHandler(pt.id)}
-              className="mt-4 shadow-2xl py-2  mb-8 w-32 px-4 rounded-full uppercase bg-lightyellow"
+              onClick={addToCart}
+              className="mt-4 shadow-2xl py-2  mb-8 w-40 px-4 rounded-full uppercase bg-lightyellow text-sm"
             >
-              Purchase
+              Add To Shopping Cart
             </button>
           </div>
         ))}
