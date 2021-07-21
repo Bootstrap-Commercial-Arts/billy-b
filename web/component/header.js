@@ -17,14 +17,14 @@ const Header = () => {
   return (
     <>
       <div className="flex flex-row bg-lightblue">
-        <div className="bg-darkblue flex-1 pl-4 pt-2">
-          <Image src={Logo} width={72} height={72} />
-        </div>
+        <Link href="/">
+          <div className="bg-darkblue flex-1 pl-4 pt-2">
+            <Image src={Logo} width={72} height={72} />
+          </div>
+        </Link>
         <div className="flex-1 pl-2">
-          {/* <PlayButtonIcon />
-          <span className="uppercase">videos</span> */}
-          <Link href="/store">
-            <a href="/store">
+          <Link href="/videos">
+            <a href="/videos">
               <PlayButtonIcon />
             </a>
           </Link>
@@ -33,9 +33,11 @@ const Header = () => {
           </button>
         </div>
         <div className=" flex-1">
-          {/* <ShoppingCartIcon />
-          <span className="uppercase">store</span> */}
-          <ShoppingCartIcon />
+          <Link href="/store">
+            <a hre="/store">
+              <ShoppingCartIcon />
+            </a>
+          </Link>
           <button className="uppercase  mt-1 border-white px-2 border-2 text-white">
             store
           </button>

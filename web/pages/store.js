@@ -5,6 +5,7 @@ import storeimage from "../public/image/Store-Hero.jpg";
 import { sanityClient } from "../lib/sanity";
 import { client, addProductToCart } from "../lib/shopify";
 import imageUrlBuilder from "@sanity/image-url";
+import Router from "next/router";
 
 const builder = imageUrlBuilder(sanityClient);
 
@@ -30,6 +31,7 @@ const Store = ({ products, albums }) => {
           quantity: Number(count),
         },
       ]);
+      Router.push("/shoppingcart");
     } catch (e) {
       console.log(e);
     }
