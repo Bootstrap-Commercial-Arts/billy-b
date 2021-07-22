@@ -26,6 +26,8 @@ const addProductToCart = async(product) => {
 const getCart = async() => {
     return JSON.parse(window.localStorage.getItem("cart"));
 };
+
+
 const storeCart = async({
     lineItems,
     totalPrice,

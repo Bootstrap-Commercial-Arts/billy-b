@@ -1,4 +1,5 @@
 // First, we must import the schema creator
+
 import createSchema from "part:@sanity/base/schema-creator";
 
 // Then import schema types from any plugins that might expose them
@@ -11,17 +12,16 @@ import shows from "./documents/shows";
 import lyrics from "./documents/lyrics";
 import albums from "./documents/albums";
 import contact from "./documents/contact";
-import product from "./documents/product";
-import collection from "./documents/collection";
+// import shopifyProduct from "./documents/shopifyProduct";
+// import shopifyCollection from "./documents/shopifyCollection";
 
 import blockContent from "./objects/blockContent";
 import guides from "./objects/guides";
 import { saneShopify } from "@sane-shopify/sanity-plugin";
 
-const saneShopifyConfig = {
-    product,
-    collection,
-};
+const saneShopifyConfig = {};
+
+console.log("saneShopifyConfig ", saneShopifyConfig);
 
 const saneShopifyTypes = saneShopify(saneShopifyConfig);
 
@@ -40,6 +40,6 @@ export default createSchema({
         albums,
         guides,
         blockContent,
-        saneShopifyTypes,
+        ...saneShopifyTypes,
     ]),
 });
