@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import storeimage from "../public/image/Store-Hero.jpg";
@@ -9,12 +9,27 @@ import Router from "next/router";
 
 const builder = imageUrlBuilder(sanityClient);
 
-const Store = ({ products, albums }) => {
-  console.log(products);
-  console.log("albums", albums);
-
+const Store = ({ products }) => {
+  console.log("products", products);
+  // console.log("data", data);
+  // console.log(products);
+  // console.log("albums", albums);
+  const [albums, setAlbums] = useState([]);
   const [count, setCount] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState("");
+
+  useEffect(async () => {
+    const query = '*[_type == "shopifyProduct"]';
+    const data = await sanityClient.fetch(query);
+    console.log("useEffect", data);
+
+    setAlbums(data);
+    // const products = data.map((i) => i.sourceData);
+    // setAlbums(products);
+  }, []);
+
+  const result = albums.map((i) => i.sourceData);
+  console.log("result", result);
   const handleCount = (value) =>
     !(count === 0 && value === -1) ? setCount(count + value) : count;
 
@@ -63,7 +78,7 @@ const Store = ({ products, albums }) => {
               className="ml-auto mr-auto w-full lg:w-3/6 lg:mr-12"
             />
             <p className="text-white font-light mb-2 mt-4 leading-none">
-              {dt.albumName}
+              {dt.title}
             </p>
             <p className="text-white">${dt.albumPrice}</p>
             <button className="mt-4 shadow-2xl py-2  mb-8 w-32 px-4 rounded-full uppercase bg-lightyellow">
@@ -71,16 +86,19 @@ const Store = ({ products, albums }) => {
             </button>
           </div>
         ))} */}
-        {products.map((pt, index) => (
+
+        {result.map((rt, index) => (
           <div key={index}>
             <img
-              src={pt.images.map((i) => i.src)}
+              src={rt.images.edges.map((j) => j.node.originalSrc)}
               className="ml-auto mr-auto w-full lg:w-3/6 lg:mr-12"
             />
             <p className="text-white font-light mb-2 mt-4 leading-none">
-              {pt.title}
+              {rt.title}
             </p>
-            <p className="text-white">${pt.variants.map((i) => i.price)}</p>
+            <p className="text-white">
+              ${rt.variants.edges.map((i) => i.node.priceV2.amount)}
+            </p>
             <div className="flex items-center mt-3">
               <button
                 onClick={() => handleCount(1)}
@@ -118,9 +136,9 @@ const Store = ({ products, albums }) => {
             </div>
             <button
               onClick={addToCart}
-              className="mt-4 shadow-2xl py-2  mb-8 w-40 px-4 rounded-full uppercase bg-lightyellow text-sm"
+              className="mt-4 shadow-2xl py-2  mb-8 w-32 px-4 rounded-full uppercase bg-lightyellow text-sm"
             >
-              Add To Shopping Cart
+              Add To Cart
             </button>
           </div>
         ))}
@@ -132,27 +150,29 @@ const Store = ({ products, albums }) => {
 // Sanityio fetching data
 
 // export const getServerSideProps = async () => {
-//   const query = '*[_type == "albums"]';
+//   const query = '*[_type == "shopifyProduct"]';
 //   const data = await sanityClient.fetch(query);
 //   console.log("getServerSideProps", data);
+
+//   const products = data.map((i) => i.sourceData);
 //   return {
 //     props: {
-//       data,
+//       products,
 //     },
 //   };
 // };
 
 // Shopify fetching products
-export const getServerSideProps = async (context) => {
-  const products = await client.product.fetchAll();
-  const albumCollections = await client.collection.fetchAllWithProducts();
-  console.log("albumCollections", JSON.parse(JSON.stringify(albumCollections)));
-  return {
-    props: {
-      products: JSON.parse(JSON.stringify(products)),
-      albums: JSON.parse(JSON.stringify(albumCollections)),
-    },
-  };
-};
+// export const getServerSideProps = async (context) => {
+//   const products = await client.product.fetchAll();
+//   const albumCollections = await client.collection.fetchAllWithProducts();
+//   console.log("albumCollections", JSON.parse(JSON.stringify(albumCollections)));
+//   return {
+//     props: {
+//       products: JSON.parse(JSON.stringify(products)),
+//       albums: JSON.parse(JSON.stringify(albumCollections)),
+//     },
+//   };
+// };
 
 export default Store;

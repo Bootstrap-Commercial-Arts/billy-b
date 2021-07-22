@@ -18,11 +18,12 @@ const serializers = {
 };
 
 const Album = ({ data }) => {
-  const songs = data.map((i) => i.songs);
-  const lyric = songs[0];
-  const item = lyric.map((i) => i.lyricContent);
-  const result = item[0];
-
+  console.log("data", data);
+  const songs = data.map((i) => i.songs).flat();
+  console.log("songs", songs);
+  const item = songs.map((i) => i.lyricContent);
+  console.log("item", item);
+  console.log(item.forEach((i) => i));
   return (
     <div className="bg-mediumblue">
       <Head>
@@ -30,32 +31,34 @@ const Album = ({ data }) => {
       </Head>
       <div>
         {data.map((dt, index) => (
-          <div key={index}>
-            <div className="w-8/12 ml-auto mr-auto pt-12">
-              <img
-                src={builder.image(dt.albumCover.asset._ref)}
-                className="ml-auto mr-auto w-full lg:w-3/6 lg:mr-12"
-              />
+          <>
+            <div key={index}>
+              <div className="w-8/12 ml-auto mr-auto pt-12">
+                <img
+                  src={builder.image(dt.albumCover.asset._ref)}
+                  className="ml-auto mr-auto w-full lg:w-3/6 lg:mr-12"
+                />
+              </div>
+              <p className="uppercase text-4xl text-center w-4/5 ml-auto mr-auto pt-12">
+                {dt.albumName}
+              </p>
             </div>
-            <p className="uppercase text-4xl text-center w-4/5 ml-auto mr-auto pt-12">
-              {dt.albumName}
-            </p>
-          </div>
+            <div className="flex flex-col mt-8">
+              <button className="shadow-2xl  ml-auto py-1 mr-auto mb-4 w-60 px-8 rounded-full uppercase bg-lightyellow">
+                Direct Download
+              </button>
+              <button className="shadow-2xl  ml-auto py-1 mr-auto mb-4 w-60 px-8 rounded-full uppercase bg-lightblue">
+                Apple Music
+              </button>
+            </div>
+            <BlockContent
+              blocks={item.forEach((i) => i)}
+              serializers={serializers}
+              className="w-9/12 ml-auto mr-auto mt-12 leading-8 pb-12"
+            />
+          </>
         ))}
       </div>
-      <div className="flex flex-col mt-8">
-        <button className="shadow-2xl  ml-auto py-1 mr-auto mb-4 w-60 px-8 rounded-full uppercase bg-lightyellow">
-          Direct Download
-        </button>
-        <button className="shadow-2xl  ml-auto py-1 mr-auto mb-4 w-60 px-8 rounded-full uppercase bg-lightblue">
-          Apple Music
-        </button>
-      </div>
-      <BlockContent
-        blocks={result}
-        serializers={serializers}
-        className="w-9/12 ml-auto mr-auto mt-12 leading-8 pb-12"
-      />
     </div>
   );
 };
