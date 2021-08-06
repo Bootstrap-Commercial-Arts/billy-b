@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Album One",
+    "image": "./images/placeholder-album-art.jpg"
+  },
+  {
+    "title": "Album Two",
+    "image": "./images/placeholder-album-art.jpg"
+  },
+  {
+    "title": "Album Three",
+    "image": "./images/placeholder-album-art.jpg"
+  },
+  {
+    "title": "Album Four",
+    "image": "./images/placeholder-album-art.jpg"
+  }
+]
