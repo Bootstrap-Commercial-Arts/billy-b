@@ -8691,6 +8691,14 @@ sanity-diff-patch@^1.0.9:
   dependencies:
     diff-match-patch "^1.0.5"
 
+sanity-pills@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/sanity-pills/-/sanity-pills-1.7.0.tgz#7d0ed6077ae392bf53becdd198ca873c069f80d4"
+  integrity sha512-4T7RnfF1xs7/zrDl7/EJxitWQBQKjVznNL36u/hNDsMw9EdYMdqesMi7/0ygWe2uigJYhiwrBh+0B1R2AyTzUQ==
+  dependencies:
+    lodash "^4.17.15"
+    slugify "^1.4.6"
+
 sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -8921,6 +8929,11 @@ slate@^0.58.4:
     immer "^5.0.0"
     is-plain-object "^3.0.0"
     tiny-warning "^1.0.3"
+
+slugify@^1.4.6:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.0.tgz#6bdf8ed01dabfdc46425b67e3320b698832ff893"
+  integrity sha512-FkMq+MQc5hzYgM86nLuHI98Acwi3p4wX+a5BO9Hhw4JdK4L7WueIiZ4tXEobImPqBz2sVcV0+Mu3GRB30IGang==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
