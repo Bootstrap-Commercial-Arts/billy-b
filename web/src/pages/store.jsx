@@ -8,7 +8,11 @@ import theme from "../styles/theme"
 import StoreItem from "../components/StoreItem"
 import placeholderCover from "../assets/album-art/ph-album-art.jpg"
 
-const StorePage = () => (
+const StorePage = ({
+  data: {
+    page: { products },
+  },
+}) => (
   <Layout title="Billy B Store Page">
     <img
       src={storeHero}
@@ -87,51 +91,25 @@ const StorePage = () => (
         }}
       >
         {/* ADD ADDITIONAL COMPONENTS TO ADD A NEW STORE ITEM */}
-        <StoreItem
-          image={placeholderCover}
-          name="Product Name"
-          price="14.95"
-          css={{
-            padding: "0.5rem",
-            marginBottom: "0.5rem",
-          }}
-        />
-        <StoreItem
-          image={placeholderCover}
-          name="Product Name"
-          price="15.95"
-          css={{
-            padding: "0.5rem",
-            marginBottom: "0.5rem",
-          }}
-        />
-        <StoreItem
-          image={placeholderCover}
-          name="Product Name"
-          price="16.95"
-          css={{
-            padding: "0.5rem",
-            marginBottom: "0.5rem",
-          }}
-        />
-        <StoreItem
-          image={placeholderCover}
-          name="Product Name"
-          price="17.95"
-          css={{
-            padding: "0.5rem",
-            marginBottom: "0.5rem",
-          }}
-        />
-        <StoreItem
-          image={placeholderCover}
-          name="Product Name"
-          price="18.95"
-          css={{
-            padding: "0.5rem",
-            marginBottom: "0.5rem",
-          }}
-        />
+        {products.map(({ id, ...rest }) => {
+          const img = rest.sourceData.images.edges[0].node
+            ? rest.sourceData.images.edges[0].node.w800
+            : "https://via.placeholder.com/200"
+          return (
+            <StoreItem
+              key={id}
+              image={img}
+              handle={rest.handle}
+              name={rest.title}
+              price={rest.maxVariantPrice}
+              css={{
+                padding: "0.5rem",
+                marginBottom: "0.5rem",
+              }}
+            />
+          )
+        })}
+
         {/* ALL STOREITEM COMPONENTS ABOVE HERE */}
       </div>
     </div>
@@ -139,3 +117,42 @@ const StorePage = () => (
 )
 
 export default StorePage
+
+export const query = graphql`
+  {
+    page: allSanityShopifyProduct(
+      filter: {
+        sourceData: {
+          images: {
+            edges: {
+              elemMatch: { node: { originalSrc: {} }, _key: { ne: "null" } }
+            }
+          }
+        }
+      }
+    ) {
+      products: nodes {
+        handle
+        title
+        maxVariantPrice
+        minVariantPrice
+        archived
+        sourceData {
+          images {
+            edges {
+              node: node {
+                w100
+                w1200
+                w1600
+                w300
+                w800
+              }
+            }
+          }
+        }
+        shopifyId
+        id: _id
+      }
+    }
+  }
+`

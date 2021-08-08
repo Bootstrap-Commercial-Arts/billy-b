@@ -3,7 +3,17 @@ import theme from "../styles/theme"
 import bookingHero from "../assets/booking-hero.png"
 import AreaBlock from "../components/AreaBlock"
 import Layout from "../components/Layout"
-
+const handleSubmit = event => {
+  event.preventDefault()
+  return window.open(
+    `mailto:billybsings@gmail.com?subject=${encodeURIComponent(
+      `Contact from ${event.target.name.value} Billy-b.com`
+    )}&body=${encodeURIComponent(
+      `From: ${event.target.name.value}\n\nEmail: ${event.target.email.value}\n\nMessage: ${event.target.message.value}`
+    )}`,
+    "_blank"
+  )
+}
 const BookingPage = () => (
   <Layout title="Billy B Booking Page">
     <img
@@ -82,13 +92,18 @@ const BookingPage = () => (
     >
       <form
         name="booking"
-        action="mailto:billybsings@gmail.com"
+        method="POST"
+        onSubmit={handleSubmit}
         css={{
           width: "83.333333%",
           margin: "3rem auto 0",
           // paddingBottom: "3rem",
         }}
       >
+        {/* radio button can go here and you can add them to form data above */}
+        {/* <div css={{ margin: "2rem 0" }}>
+          <input type="radio" id="dc" css={{ height: "2rem" }} />
+        </div> */}
         <div css={{ margin: "2rem 0" }}>
           <input
             type="name"
@@ -115,7 +130,7 @@ const BookingPage = () => (
             rows="10"
             css={{
               width: "98.375%",
-              color: theme.formGray,
+              color: theme.black,
               padding: 5,
             }}
           ></textarea>

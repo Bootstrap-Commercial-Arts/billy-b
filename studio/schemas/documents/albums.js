@@ -11,6 +11,16 @@ export default {
             type: "string",
         },
         {
+            name: "slug",
+            title: "Album Slug",
+            description: "This is for the album details page",
+            type: "slug",
+            options: {
+                source: "albumName",
+                maxLength: 96,
+            },
+        },
+        {
             name: "albumCover",
             title: "Album Cover",
             type: "image",
@@ -23,6 +33,11 @@ export default {
         {
             name: "purchaseUrl",
             title: "Album Purchase Url",
+            type: "url",
+        },
+        {
+            name: "applePurchaseUrl",
+            title: "Apple music Url",
             type: "url",
         },
         {

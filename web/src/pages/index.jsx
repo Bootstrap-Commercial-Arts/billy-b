@@ -14,15 +14,14 @@ import EducatorThumb from "../assets/homepage/thumbnail-lyrics.jpg"
 const Home = () => (
   <Layout title="Billy B Home Page">
     <div>
-      <img
-        src="https://via.placeholder.com/1260x700"
+      <iframe
+        src={`https://www.youtube.com/embed/JsGHW5BErEM`}
         css={{
-          position: "relative",
-          objectFit: "cover",
-          display: "block",
           width: "100%",
+          height: "500px",
+          border: "none",
         }}
-      />
+      ></iframe>
       <div
         css={{
           display: "grid",

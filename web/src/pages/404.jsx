@@ -10,7 +10,7 @@ const AlbumsPage = ({
     page: { albums },
   },
 }) => (
-  <Layout title="Billy B Albums Page">
+  <Layout title="Billy B 404 Page">
     <img
       src={albumsHero}
       width="max-content"
@@ -33,11 +33,7 @@ const AlbumsPage = ({
           fontStyle: "italic",
         }}
       >
-        Enjoy Billy B’s extensive discography, with purchase links and lyrics
-        for every song! Lyrics for all of Billy B’s songs are available to view,
-        download, or print to use on your own or for your students. This
-        resource is very helpful for those who are deaf and hard of hearing,
-        speak English as a secong language, or if you just want to sing along!
+        Oops you reach this page BY Accident 404
       </p>
     </div>
     <div

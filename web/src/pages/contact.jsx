@@ -4,124 +4,138 @@ import Layout from "../components/Layout"
 import contactHero from "../assets/contact-hero.jpg"
 import theme from "../styles/theme"
 
-const ContactPage = () => (
-  <Layout title="Billy B Contact Page">
-    <img
-      src={contactHero}
-      width="max-content"
-      css={{
-        position: "relative",
-        objectFit: "cover",
-        display: "block",
-        maxWidth: "100%",
-      }}
-    />
-    <div>
-      <div>
-        <p
-          css={{
-            width: "83.333333%",
-            margin: "2rem auto",
-            paddingBottom: "1.5rem",
-            color: theme.white,
-            lineHeight: "1.75rem",
-            fontWeight: 300,
-            fontStyle: "italic",
-          }}
-        >
-          Billy loves to hear from children & educators, and reads every message
-          sent to him. Have a question, comment, or drawing you'd like to send
-          him? Use the convenient & secure contact form. If you're inquiring
-          about booking a virtual or in-person performance, please use the
-          <Link href="#">
-            <a css={{ color: theme.lightYellow }}> booking form</a>
-          </Link>
-        </p>
-      </div>
-      <div
+const ContactPage = () => {
+  const handleSubmit = event => {
+    event.preventDefault()
+    return window.open(
+      `mailto:billybsings@gmail.com?subject=${encodeURIComponent(
+        `Contact from ${event.target.name.value} Billy-b.com`
+      )}&body=${encodeURIComponent(
+        `From: ${event.target.name.value}\n\nEmail: ${event.target.email.value}\n\nMessage: ${event.target.message.value}`
+      )}`,
+      "_blank"
+    )
+  }
+  return (
+    <Layout title="Billy B Contact Page">
+      <img
+        src={contactHero}
+        width="max-content"
         css={{
-          backgroundColor: theme.darkBlue,
-          paddingTop: "1rem",
-          // paddingBottom: "3rem",
-          background:
-            "linear-gradient(180deg, #007B8C 0%, rgba(0, 148, 171, 0) 2rem)",
+          position: "relative",
+          objectFit: "cover",
+          display: "block",
+          maxWidth: "100%",
         }}
-      >
-        <form
-          name="contact"
-          // method="POST"
-          action="mailto:billybsings@gmail.com"
-          css={{
-            width: "83.333333%",
-            margin: "3rem auto 0",
-            // paddingBottom: "3rem",
-          }}
-        >
-          <div css={{ margin: "2rem 0" }}>
-            <input
-              type="name"
-              id="name"
-              placeholder="Your Name"
-              required
-              css={{ width: "99%", height: "2rem" }}
-            />
-          </div>
-          <div css={{ margin: "2rem 0" }}>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              required
-              css={{ width: "99%", height: "2rem" }}
-            />
-          </div>
-          <div css={{ margin: "2rem 0" }}>
-            <textarea
-              id="message"
-              cols="30"
-              placeholder="Message"
-              rows="10"
-              css={{
-                width: "98.375%",
-                color: theme.black,
-                padding: 5,
-              }}
-            ></textarea>
-          </div>
-
-          <div
+      />
+      <div>
+        <div>
+          <p
             css={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              justifyItems: "end",
+              width: "83.333333%",
+              margin: "2rem auto",
+              paddingBottom: "1.5rem",
+              color: theme.white,
+              lineHeight: "1.75rem",
+              fontWeight: 300,
+              fontStyle: "italic",
             }}
           >
-            <FileUploader />
-            <button
-              type="submit"
+            Billy loves to hear from children & educators, and reads every
+            message sent to him. Have a question, comment, or drawing you'd like
+            to send him? Use the convenient & secure contact form. If you're
+            inquiring about booking a virtual or in-person performance, please
+            use the <Link to="/booking-form" css={{ color: theme.lightYellow }}>
+               booking form
+            </Link>
+          </p>
+        </div>
+        <div
+          css={{
+            backgroundColor: theme.darkBlue,
+            paddingTop: "1rem",
+            // paddingBottom: "3rem",
+            background:
+              "linear-gradient(180deg, #007B8C 0%, rgba(0, 148, 171, 0) 2rem)",
+          }}
+        >
+          <form
+            name="contact"
+            method="POST"
+            onSubmit={handleSubmit}
+
+            css={{
+              width: "83.333333%",
+              margin: "3rem auto 0",
+              // paddingBottom: "3rem",
+            }}
+          >
+            <div css={{ margin: "2rem 0" }}>
+              <input
+                type="name"
+                id="name"
+                // ref={node => (name = node)}
+                placeholder="Your Name"
+                required
+                css={{ width: "99%", height: "2rem" }}
+              />
+            </div>
+            <div css={{ margin: "2rem 0" }}>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+                css={{ width: "99%", height: "2rem" }}
+              />
+            </div>
+            <div css={{ margin: "2rem 0" }}>
+              <textarea
+                id="message"
+                cols="30"
+                placeholder="Message"
+                rows="10"
+                css={{
+                  width: "98.375%",
+                  color: theme.black,
+                  padding: 5,
+                }}
+              ></textarea>
+            </div>
+
+            <div
               css={{
-                padding: "1rem 1rem",
-                width: "12rem",
-                borderRadius: 9999,
-                borderColor: theme.mediumBlue,
-                borderStyle: "none",
-                textTransform: "uppercase",
-                backgroundColor: theme.lightYellow,
-                color: theme.black,
-                textAlign: "center",
-                fontWeight: 700,
-                alignItems: "flex-end",
+                display: "grid",
+                gridTemplateColumns: "1fr",
+                justifyItems: "end",
               }}
             >
-              Send
-            </button>
-          </div>
-        </form>
+              {/* <FileUploader /> */}
+              <button
+                type="submit"
+                css={{
+                  padding: "1rem 1rem",
+                  width: "12rem",
+                  borderRadius: 9999,
+                  borderColor: theme.mediumBlue,
+                  borderStyle: "none",
+                  textTransform: "uppercase",
+                  backgroundColor: theme.lightYellow,
+                  color: theme.black,
+                  textAlign: "center",
+                  fontWeight: 700,
+                  alignItems: "flex-end",
+                }}
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </Layout>
-)
-
+    </Layout>
+  )
+}
 export default ContactPage
 
 const FileUploader = props => {

@@ -6,13 +6,10 @@ Website for Billy B - Educational song and dance man
 
 ### Front End
 
-- Svelte Kit
-  - Typescript
-  - Svelte SEO
-  - Svelte Shopify Checkout Component?
-  - Youtube API integration (Sanity plugin?)
-    - [Svelte Youtube Component](https://github.com/PandaWhisperer/svelte-youtube)
-  
+
+- Gatsby
+- Sane shopify
+
 
 ### Back End
 

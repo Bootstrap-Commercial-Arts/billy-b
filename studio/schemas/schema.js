@@ -23,26 +23,26 @@ import { saneShopify } from "@sane-shopify/sanity-plugin";
 
 const saneShopifyConfig = {};
 
-console.log("saneShopifyConfig ", saneShopifyConfig);
+// console.log("saneShopifyConfig ", saneShopifyConfig);
 
 const saneShopifyTypes = saneShopify(saneShopifyConfig);
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
-  // We name our schema
-  name: "default",
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    siteSettings,
-    seoSettings,
-    teacherGuides,
-    upload,
-    lyrics,
-    shows,
-    contact,
-    albums,
-    blockContent,
-    ...saneShopifyTypes,
-  ]),
+    // We name our schema
+    name: "default",
+    // Then proceed to concatenate our document type
+    // to the ones provided by any plugins that are installed
+    types: schemaTypes.concat([
+        siteSettings,
+        seoSettings,
+        teacherGuides,
+        upload,
+        lyrics,
+        shows,
+        contact,
+        albums,
+        blockContent,
+        ...saneShopifyTypes,
+    ]),
 });

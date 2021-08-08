@@ -1,10 +1,16 @@
 import React from "react"
 import Layout from "../components/Layout"
+import ShowInfo from "../components/ShowInfo"
 import showHero from "../assets/show-hero.jpg"
 import theme from "../styles/theme"
 import Button from "../components/Button"
+import { Link } from "gatsby"
 
-const SingleShowPage = () => (
+const SingleShowPage = ({
+  data: {
+    page: { shows },
+  },
+}) => (
   <Layout title="Billy B Shows Page">
     <img
       src={showHero}
@@ -24,92 +30,88 @@ const SingleShowPage = () => (
         },
       }}
     >
-      <div
-        css={{
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr",
-
-          [theme.mobile]: {
-            display: "block",
-          },
-        }}
-      >
-        <div
+      <div>
+        <p
           css={{
-            width: "66.666667%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            paddingTop: "3rem",
-            [theme.mobile]: {
-              textAlign: "center",
-            },
+            width: "90%",
+            margin: "2rem auto",
+            paddingBottom: "1.5rem",
+            color: theme.white,
+            lineHeight: "1.75rem",
+            fontWeight: 300,
+            fontStyle: "italic",
           }}
         >
-          <img
-            src="https://via.placeholder.com/150"
-            css={{
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          />
-        </div>
-        <div>
-          <div
-            css={{
-              textTransform: "uppercase",
-              textAlign: "left",
-              marginLeft: "auto",
-              marginRight: "auto",
-              paddingTop: "3rem",
-              width: "80%",
-              fontSize: "2.25rem",
-              lineHeight: "2.5rem",
-              color: theme.black,
-              [theme.mobile]: {
-                textAlign: "center",
-              },
-            }}
-          >
-            Billy B &amp; The Salish Sea
-          </div>
-          <div
-            css={{
-              display: "flex",
-              marginTop: "2rem",
-              marginBottom: "2.5rem",
-            }}
-          >
-            <Button backgroundColor={theme.lightYellow} textColor={theme.black}>
-              Teacher Guide
-            </Button>
-          </div>
-        </div>
+          Enjoy Billy B’s extensive SHOW TEXT CAN GO HERE, with purchase links and lyrics
+          for every song! Lyrics for all of Billy B’s songs are available to
+          view, download, or print to use on your own or for your students. This
+          resource is very helpful for those who are deaf and hard of hearing,
+          speak English as a secong language, or if you just want to sing along!
+        </p>
       </div>
       {/* LYRICS SECTION */}
       <div
         css={{
-          ul: {
-            padding: "0 4rem",
-          },
-          li: {
-            paddingTop: "1.5rem",
-            paddingBottom: "1.5rem",
-            borderBottom: "0.25rem solid #45D1E6",
-            color: theme.lightYellow,
-            fontSize: "1.25rem",
-            fontStyle: "italic",
-          },
+          backgroundColor: theme.darkBlue,
+          paddingTop: "1rem",
+          background:
+            "linear-gradient(180deg, #007B8C 0%, rgba(0, 148, 171, 0) 2rem)",
         }}
       >
-        <ul>
-          <li>Song Name Lyrics</li>
-          <li>Song Name Lyrics</li>
-          <li>Song Name Lyrics</li>
-          <li>Song Name Lyrics</li>
-        </ul>
+        <div
+          css={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr 1fr",
+            margin: "2rem",
+            "@media (max-width: 930px)": {
+              gridTemplateColumns: "1fr 1fr 1fr",
+            },
+            [theme.mobile]: {
+              gridTemplateColumns: "1fr 1fr",
+            },
+          }}
+        >
+          {shows.map(({ id, ...rest }) => (
+            <ShowInfo key={id} {...rest} />
+          ))}
+        </div>
       </div>
     </div>
   </Layout>
 )
 
 export default SingleShowPage
+
+export const query = graphql`
+{
+           page: allSanityShows {
+             shows: nodes {
+               guide {
+                 coverImage {
+                   asset {
+                     url
+                   }
+                 }
+                 title
+                 guide {
+                   asset {
+                     url
+                   }
+                 }
+               }
+               slug {
+                 current
+               }
+               title
+               id
+               songs {
+                 lyricContent: _rawLyricContent(
+                   resolveReferences: { maxDepth: 10 }
+                 )
+                 id
+                 title
+               }
+             }
+           }
+         }
+       `

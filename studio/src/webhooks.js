@@ -9,7 +9,7 @@ const authToken = process.env.SANITY_API_TOKEN;
 const shopName = process.env.NEXT_PUBLIC_SHOPIFY_URL;
 const accessToken = process.env.NEXT_PUBLIC_TOKEN;
 
-console.log(projectId, dataset, authToken, shopName, accessToken);
+// console.log(projectId, dataset, authToken, shopName, accessToken);
 
 if (!projectId) throw new Error("You must provide a sanity project ID");
 if (!dataset) throw new Error("You must provide a sanity dataset");
@@ -38,6 +38,6 @@ const config = {
     onError: handleError,
 };
 
-console.log("config", config);
+// console.log("config", config);
 
 export const webhooks = createNextWebhooks(config);

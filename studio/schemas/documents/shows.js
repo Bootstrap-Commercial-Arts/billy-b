@@ -10,6 +10,17 @@ export default {
             title: "Title",
             type: "string",
         },
+
+        {
+            name: "slug",
+            title: "Song Slug",
+            description: "This is for the song details page",
+            type: "slug",
+            options: {
+                source: "title",
+                maxLength: 96,
+            },
+        },
         {
             name: "guide",
             title: "Teacher Guide",
