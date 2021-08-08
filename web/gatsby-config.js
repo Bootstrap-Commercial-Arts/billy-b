@@ -31,13 +31,6 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-plugin-groq",
-            options: {
-                referenceMatcher: "id",
-                autoRefs: false,
-            },
-        },
-        {
             resolve: "gatsby-source-filesystem",
             options: {
                 path: "./src/content",
