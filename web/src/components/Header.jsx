@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import Logo from "../assets/logo.png"
+// import Logo from "../assets/logo.png"
 import Nav from "../components/Nav"
 import theme from "../styles/theme"
 
@@ -41,7 +41,7 @@ const Header = () => {
         >
           <Link to="/">
             <img
-              src={Logo}
+              src="../assets/logo.png"
               css={{
                 width: 180,
                 height: 180,
