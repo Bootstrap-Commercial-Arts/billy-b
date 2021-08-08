@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import YouTube from "react-youtube"
 import Layout from "../components/Layout"
 // import ExternalReferences from "../components/ExternalReferences"
 // import StatBlock from "../components/StatBlock"
