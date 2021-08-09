@@ -45,8 +45,9 @@ const ContactPage = () => {
             message sent to him. Have a question, comment, or drawing you'd like
             to send him? Use the convenient & secure contact form. If you're
             inquiring about booking a virtual or in-person performance, please
-            use the <Link to="/booking-form" css={{ color: theme.lightYellow }}>
-               booking form
+            use the{" "}
+            <Link to="/booking-form" css={{ color: theme.lightYellow }}>
+              booking form
             </Link>
           </p>
         </div>
@@ -62,8 +63,8 @@ const ContactPage = () => {
           <form
             name="contact"
             method="POST"
-            onSubmit={handleSubmit}
-
+            data-netlify="true"
+            // onSubmit={handleSubmit}
             css={{
               width: "83.333333%",
               margin: "3rem auto 0",
