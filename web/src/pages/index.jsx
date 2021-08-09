@@ -36,15 +36,14 @@ const Home = () => (
             // width: "91.666667%",
             margin: "0 auto",
             padding: "1.5rem",
-            fontSize: "1.375rem",
             lineHeight: 1.181818,
             fontWeight: 300,
-            fontSize: "2.25rem",
+            fontSize: "2.25rem !important",
             // textAlign: "center",
             backgroundColor: theme.white,
             color: theme.black,
             gridColumn: "1/2",
-            [breakpoints.mobile]: {fontSize: "1.5rem",},
+            [breakpoints.mobile]: {fontSize: "1.5rem !important",},
           }}
         >
           <p>
