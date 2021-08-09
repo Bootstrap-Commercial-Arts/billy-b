@@ -17,9 +17,9 @@ const HomePageBlockA = ({
         css={{
           padding: "1rem 0 0.5rem 2rem",
           textTransform: "uppercase",
-          height: "2rem",
+          height: "3rem",
           lineHeight: "1.5rem",
-          fontSize: "1.125rem",
+          fontSize: "2rem",
           fontWeight: 300,
           textAlign: "left",
           backgroundColor: headerColor,
@@ -34,9 +34,6 @@ const HomePageBlockA = ({
         display: "grid",
         gridTemplateColumns: "1fr 3fr",
         backgroundColor: bodyColor,
-        paddingTop: "1.125rem",
-        paddingBottom: "2rem",
-        // marginTop: "-0.5rem",
         color: theme.black,
         [theme.mobile]: {
           gridTemplateColumns: "none",
@@ -48,7 +45,6 @@ const HomePageBlockA = ({
       <img
         src={image}
         css={{
-          padding: "1.5rem",
           width: "14rem",
         }}
       />
