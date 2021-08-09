@@ -91,7 +91,7 @@ const BookingPage = () => (
       }}
     >
       <form
-        name="booking"
+        name="booking-form"
         method="POST"
         netlify
         css={{

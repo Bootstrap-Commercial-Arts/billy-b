@@ -61,7 +61,7 @@ const ContactPage = () => {
           }}
         >
           <form
-            name="contact"
+            name="contact-form"
             method="POST"
             data-netlify="true"
             // onSubmit={handleSubmit}
