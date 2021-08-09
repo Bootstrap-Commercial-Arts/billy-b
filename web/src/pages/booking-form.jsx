@@ -93,8 +93,7 @@ const BookingPage = () => (
       <form
         name="booking"
         method="POST"
-        data-netlify="true"
-        // onSubmit={handleSubmit}
+        netlify
         css={{
           width: "83.333333%",
           margin: "3rem auto 0",
