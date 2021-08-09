@@ -18,6 +18,7 @@ const Button = ({
       borderStyle: "none",
       fontSize: "1.5rem",
       textDecoration: "none",
+      boxShadow: "0 3px 4px rgb(0 0 0 / 20%)",
       [theme.mobile]: {
         backgroundColor: mobileBackgroundColor,
       },

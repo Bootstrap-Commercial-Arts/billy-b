@@ -18,7 +18,7 @@ const HomePageBlockA = ({
           padding: "1rem 0 0.5rem 2rem",
           textTransform: "uppercase",
           height: "3rem",
-          lineHeight: "1.5rem",
+          lineHeight: "3rem",
           fontSize: "2rem",
           fontWeight: 300,
           textAlign: "left",
@@ -53,7 +53,7 @@ const HomePageBlockA = ({
           css={{
             marginRight: "1.5rem",
             marginLeft: "1.5rem",
-            fontSize: "1.25rem",
+            fontSize: "1.5rem",
           }}
         >
           {details}
@@ -84,6 +84,7 @@ const HomePageBlockA = ({
             >
               {linkText}
             </Link>
+            <br></br>
           </div>
         )}
       </div>
