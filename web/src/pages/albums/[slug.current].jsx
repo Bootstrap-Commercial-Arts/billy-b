@@ -98,7 +98,7 @@ const AlbumPage = ({ data }) => {
                 backgroundColor={theme.lightYellow}
                 textColor={theme.black}
               >
-                <a href={album.purchaseUrl} target="_blank">
+                <a href={album.purchaseUrl} target="_blank" rel="noreferrer">
                   Purchase Album
                 </a>
               </Button>
@@ -106,7 +106,11 @@ const AlbumPage = ({ data }) => {
                 backgroundColor={theme.mediumBlue}
                 textColor={theme.black}
               >
-                <a href={album.applePurchaseUrl} target="_blank">
+                <a
+                  href={album.applePurchaseUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Apple Music
                 </a>
               </Button>
