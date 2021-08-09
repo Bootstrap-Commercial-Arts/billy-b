@@ -73,6 +73,7 @@ const ContactPage = () => {
               // paddingBottom: "3rem",
             }}
           >
+            <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact-form" />
             <div css={{ margin: "2rem 0" }}>
               <input
