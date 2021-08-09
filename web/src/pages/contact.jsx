@@ -65,6 +65,7 @@ const ContactPage = () => {
             method="POST"
             data-netlify="true"
             action="/thank-you"
+            data-netlify-honeypot="bot-field"
             // onSubmit={handleSubmit}
             css={{
               width: "83.333333%",
@@ -72,7 +73,8 @@ const ContactPage = () => {
               // paddingBottom: "3rem",
             }}
           >
-            <input type="hidden" name="contact-form" value="Contact Form" />
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact-form" />
             <div css={{ margin: "2rem 0" }}>
               <input
                 type="name"
