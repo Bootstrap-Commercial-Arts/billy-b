@@ -112,6 +112,7 @@ const BookingPage = () => (
           <input
             type="name"
             id="name"
+            name="name"
             placeholder="Your Name"
             required
             css={{ width: "99%", height: "2rem" }}
@@ -121,6 +122,7 @@ const BookingPage = () => (
           <input
             type="email"
             id="email"
+            name="email"
             placeholder="Email"
             required
             css={{ width: "99%", height: "2rem" }}
@@ -130,6 +132,7 @@ const BookingPage = () => (
           <textarea
             id="message"
             cols="30"
+            name="message"
             placeholder="Message"
             rows="10"
             css={{

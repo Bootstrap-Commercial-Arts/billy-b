@@ -79,6 +79,7 @@ const ContactPage = () => {
               <input
                 type="name"
                 id="name"
+                name="name"
                 // ref={node => (name = node)}
                 placeholder="Your Name"
                 required
@@ -89,6 +90,7 @@ const ContactPage = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Email"
                 required
                 css={{ width: "99%", height: "2rem" }}
@@ -99,6 +101,7 @@ const ContactPage = () => {
                 id="message"
                 cols="30"
                 placeholder="Message"
+                name="message"
                 rows="10"
                 css={{
                   width: "98.375%",
