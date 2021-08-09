@@ -39,6 +39,7 @@ const FooterBooker = () => (
           borderColor: theme.mediumBlue,
           borderStyle: "none",
           fontSize: "1.5rem",
+          boxShadow: "0 3px 4px rgb(0 0 0 / 20%)",
         }}
       >
         <Link

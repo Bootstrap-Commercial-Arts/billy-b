@@ -139,6 +139,7 @@ const AboutPage = () => (
       “Biodiversity 911″ project, a traveling exhibition by WWF. A live
       show was also commissioned ”Bio, Bio, Biodiversity,“ which Billy
       has now performed hundreds of times all over the country."
+      linkUrl="https://www.worldwildlife.org/"
     />
     <ExternalReferences
       title="National Geographic"
@@ -147,6 +148,7 @@ const AboutPage = () => (
       details="Multiple performances at The National Geographic Headquarters in
       Washington DC. Original song commisioned for “BioBlitz”; recorded,
       produced, and performed live twice for National Geographic."
+      linkUrl="http://www.nationalgeographic.com/"
     />
     <ExternalReferences
       title="Smithsonian"
@@ -154,6 +156,7 @@ const AboutPage = () => (
       date="Since 1984"
       details="Performed at The National Zoo, The American Art Museum, The Natural
       History Museum, The Folklife Festival, and The Discovery Theater."
+      linkUrl="https://washington.org/smithsonian-institution-museums"
     />
     <ExternalReferences
       title="Project Learning Tree"
@@ -162,6 +165,7 @@ const AboutPage = () => (
       details="Performed for PLT at many national conferences and regional
       workshops. Three award winning recordings and a video compilation
       have also been released."
+      linkUrl="https://www.plt.org/"
     />
   </Layout>
 )

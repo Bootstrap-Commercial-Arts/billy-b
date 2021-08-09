@@ -80,6 +80,7 @@ const HomePageBlockA = ({
                 letterSpacing: "7%",
                 textTransform: "uppercase",
                 textDecoration: "none",
+                boxShadow: "0 3px 4px rgb(0 0 0 / 20%)",
               }}
             >
               {linkText}

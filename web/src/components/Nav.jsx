@@ -54,6 +54,12 @@ const Nav = () => {
             fontSize: "2rem",
             listStyle: "none",
             textTransform: "uppercase",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            zIndex: "1000",
+            width: "100vw",
+            height: "80vh",
             li: {
               paddingLeft: "auto",
               paddingRight: "auto",
@@ -65,6 +71,7 @@ const Nav = () => {
             "a:hover": {
               color: theme.mediumYellow,
             },
+            
             [theme.mobile]: {
               display: "none",
             },

@@ -4,7 +4,7 @@ const StylizedBlockquote = ({ children }) => (
   <blockquote
     css={{
       fontFamily: "Mali, 'Comic Sans', sans-serif",
-      fontSize: "2.25rem",
+      fontSize: "3.25rem",
       textTransform: "uppercase",
       textAlign: "center",
       color: "#007B8C",

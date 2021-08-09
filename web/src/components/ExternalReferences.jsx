@@ -1,7 +1,7 @@
 import React from "react"
 import theme from "../styles/theme"
 
-const ExternalReferences = ({ image, title, date, details }) => (
+const ExternalReferences = ({ image, title, date, details, linkUrl }) => (
   <div css={{ backgroundColor: theme.darkBlue, marginTop: "4rem" }}>
     <div
       css={{
@@ -30,7 +30,7 @@ const ExternalReferences = ({ image, title, date, details }) => (
             },
           }}
         >
-          <a href="#">
+          <a href="{linkUrl}">
             <img
               src={image || "https://via.placeholder.com/150"}
               alt=""
@@ -39,7 +39,7 @@ const ExternalReferences = ({ image, title, date, details }) => (
           </a>
         </div>
         <div css={{ textAlign: "center", paddingTop: "0.5rem" }}>
-          <button
+          <a href="{linkUrl}"><button
             css={{
               backgroundColor: theme.mediumBlue,
               color: theme.black,
@@ -50,10 +50,11 @@ const ExternalReferences = ({ image, title, date, details }) => (
               textTransform: "uppercase",
               textAlign: "center",
               margin: "0 auto",
+              boxShadow: "0 3px 4px rgb(0 0 0 / 20%)",
             }}
           >
             Visit Website
-          </button>
+          </button></a>
         </div>
       </div>
       <div
