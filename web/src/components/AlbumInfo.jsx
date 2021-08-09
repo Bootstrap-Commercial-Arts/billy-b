@@ -18,7 +18,7 @@ const AlbumInfo = ({ albumCover, albumName ,albumPrice, slug}) => (
         <div
           css={{ paddingTop: "0.5rem", fontWeight: 500, color: theme.black }}
         >
-          {albumName} - {albumPrice}
+          {albumName}
         </div>
       </Link>
     </div>

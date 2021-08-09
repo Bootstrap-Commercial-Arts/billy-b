@@ -40,6 +40,7 @@ const Layout = props => {
             css={{
               backgroundColor: theme.darkBlue,
               padding: "0 0 2rem",
+              minHeight: "100vh",
             }}
           >
             {props.children}

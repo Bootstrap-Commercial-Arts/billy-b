@@ -42,7 +42,7 @@ const ContactPage = () => {
             }}
           >
             Billy loves to hear from children & educators, and reads every
-            message sent to him. Have a question, comment, or drawing you'd like
+            message sent to him. Have a question or comment you'd like
             to send him? Use the convenient & secure contact form. If you're
             inquiring about booking a virtual or in-person performance, please
             use the{" "}

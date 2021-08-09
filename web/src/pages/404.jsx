@@ -2,8 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import theme from "../styles/theme"
-import AlbumInfo from "../components/AlbumInfo"
-import albumsHero from "../assets/albums-hero.jpg"
+
 
 const page404 = () => (
   <Layout title="Billy B 404 Page">
@@ -29,7 +28,7 @@ const page404 = () => (
           fontStyle: "italic",
         }}
       >
-        Oops you reach this page BY Accident 404
+        Oops, you reached this page by accident! 404 error.
       </p>
     </div>
 
@@ -39,24 +38,4 @@ const page404 = () => (
 
 export default page404
 
-export const query = graphql`
-         {
-           page: allSanityAlbums {
-             albums: nodes {
-               albumCover {
-                 asset {
-                   url
-                 }
-               }
-               slug {
-                 current
-               }
-               albumName
-               albumPrice
-               purchaseUrl
-               applePurchaseUrl
-               id: _id
-             }
-           }
-         }
-       `
+

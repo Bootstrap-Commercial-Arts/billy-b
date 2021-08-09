@@ -39,9 +39,8 @@ const BookingPage = () => (
           fontSize: "1.75rem",
         }}
       >
-        Select your area to contact the designated booking agent using the
-        booking form below. Or, give them a call to discuss bringing Billy B to
-        your school or event!
+        Contact the designated booking agent for your area directly. Or, use the email form to discuss bringing Billy B to
+        your school or event, wherever you are!
       </div>
       <div
         css={{
