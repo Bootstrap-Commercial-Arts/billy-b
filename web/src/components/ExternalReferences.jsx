@@ -30,7 +30,7 @@ const ExternalReferences = ({ image, title, date, details, linkUrl }) => (
             },
           }}
         >
-          <a href="{linkUrl}">
+          <a href={linkUrl}>
             <img
               src={image || "https://via.placeholder.com/150"}
               alt=""
@@ -39,7 +39,7 @@ const ExternalReferences = ({ image, title, date, details, linkUrl }) => (
           </a>
         </div>
         <div css={{ textAlign: "center", paddingTop: "0.5rem" }}>
-          <a href="{linkUrl}"><button
+          <a href={linkUrl}><button
             css={{
               backgroundColor: theme.mediumBlue,
               color: theme.black,
