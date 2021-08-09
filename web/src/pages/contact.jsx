@@ -64,6 +64,7 @@ const ContactPage = () => {
             name="contact-form"
             method="POST"
             data-netlify="true"
+            action="/thank-you"
             // onSubmit={handleSubmit}
             css={{
               width: "83.333333%",

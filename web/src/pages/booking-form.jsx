@@ -93,14 +93,15 @@ const BookingPage = () => (
       <form
         name="booking-form"
         method="POST"
-        netlify
+        data-netlify="true"
+        action="/thank-you"
         css={{
           width: "83.333333%",
           margin: "3rem auto 0",
           // paddingBottom: "3rem",
         }}
       >
-        {/* radio button can go here and you can add them to form data above */}
+        {/* onSubmit={handleSubmit} radio button can go here and you can add them to form data above */}
         {/* <div css={{ margin: "2rem 0" }}>
           <input type="radio" id="dc" css={{ height: "2rem" }} />
         </div> */}

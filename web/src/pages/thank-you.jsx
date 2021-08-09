@@ -5,8 +5,8 @@ import theme from "../styles/theme"
 import AlbumInfo from "../components/AlbumInfo"
 import albumsHero from "../assets/albums-hero.jpg"
 
-const page404 = () => (
-  <Layout title="Billy B 404 Page">
+const ThanksPage = () => (
+  <Layout title="Billy B thank you Page">
     <img
       src={albumsHero}
       width="max-content"
@@ -29,34 +29,10 @@ const page404 = () => (
           fontStyle: "italic",
         }}
       >
-        Oops you reach this page BY Accident 404
+        Thank you
       </p>
     </div>
-
-
   </Layout>
 )
 
-export default page404
-
-export const query = graphql`
-         {
-           page: allSanityAlbums {
-             albums: nodes {
-               albumCover {
-                 asset {
-                   url
-                 }
-               }
-               slug {
-                 current
-               }
-               albumName
-               albumPrice
-               purchaseUrl
-               applePurchaseUrl
-               id: _id
-             }
-           }
-         }
-       `
+export default ThanksPage
