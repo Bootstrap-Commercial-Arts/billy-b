@@ -6,16 +6,7 @@ import theme from "../styles/theme"
 
 const page404 = () => (
   <Layout title="Billy B 404 Page">
-    <img
-      src={albumsHero}
-      width="max-content"
-      css={{
-        position: "relative",
-        objectFit: "cover",
-        display: "block",
-        maxWidth: "100%",
-      }}
-    />
+
     <div>
       <p
         css={{
