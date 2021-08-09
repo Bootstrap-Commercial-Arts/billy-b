@@ -87,8 +87,6 @@ export const globalStyles = [
             flex: 1,
             padding: "1rem",
         },
-        ".row, .flex-row, .grid-row": {
-            [breakpoints.extraLarge]: { width: "1200px", margin: "0 auto" },
-        },
+        
     },
 ]

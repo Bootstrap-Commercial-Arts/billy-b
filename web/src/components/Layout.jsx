@@ -32,6 +32,7 @@ const Layout = props => {
         <div
           css={{
             margin: "0 auto",
+            [breakpoints.extraLarge]: { width: "1200px", margin: "0 auto" },
           }}
         >
           <Header />
