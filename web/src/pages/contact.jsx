@@ -71,6 +71,7 @@ const ContactPage = () => {
               // paddingBottom: "3rem",
             }}
           >
+            <input type="hidden" name="contact-form" value="Contact Form" />
             <div css={{ margin: "2rem 0" }}>
               <input
                 type="name"

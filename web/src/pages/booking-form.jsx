@@ -106,6 +106,8 @@ const BookingPage = () => (
           <input type="radio" id="dc" css={{ height: "2rem" }} />
         </div> */}
         <div css={{ margin: "2rem 0" }}>
+          <input type="hidden" name="booking-form" value="Booking Form" />
+
           <input
             type="name"
             id="name"
