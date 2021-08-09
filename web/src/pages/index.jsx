@@ -38,21 +38,20 @@ const Home = () => (
             padding: "1.5rem",
             lineHeight: 1.181818,
             fontWeight: 300,
-            fontSize: "2.25rem !important",
+            
             // textAlign: "center",
             backgroundColor: theme.white,
             color: theme.black,
             gridColumn: "1/2",
-            [breakpoints.mobile]: {fontSize: "1.5rem !important",},
           }}
         >
-          <p>
+          <p css={{fontSize: "2.25rem ", [breakpoints.mobile]: {fontSize: "1.5rem",},}}>
             Since 1977 Bill Brennan (a.k.a. “Billy B.”) has electrified
             children, parents, and teachers alike with his exciting, unique
             style of combining environmental education and entertainment.
           </p>
 
-          <p>
+          <p css={{fontSize: "2.25rem ", [breakpoints.mobile]: {fontSize: "1.5rem",},}}>
             Billy B., a trained educator turned performer, uses songs and dances
             which he writes and choreographs himself to teach children of all
             ages about the wonders of natural science, ecology and the
@@ -65,7 +64,7 @@ const Home = () => (
             Educators call it kinetic learning. Kids call it fun.
           </StylizedBlockquote>
 
-          <p>
+          <p css={{fontSize: "2.25rem ", [breakpoints.mobile]: {fontSize: "1.5rem",},}}>
             Billy B. has performed for more than 2 million children the United
             States and Canada, teaching children a large spectrum of
             environmental topics, from arthropods, alligators, and owls to
