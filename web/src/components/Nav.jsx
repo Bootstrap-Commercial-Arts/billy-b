@@ -121,6 +121,8 @@ export default Nav
 const SmallNav = () => (
   <ul
     css={{
+      width: "100vw",
+      height: "100vh",
       display: "grid",
       alignContent: "space-between",
       gridTemplateRows: "1fr 1fr 1fr 1fr 1fr",

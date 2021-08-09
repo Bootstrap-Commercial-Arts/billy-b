@@ -8,7 +8,8 @@ import StylizedBlockquote from "../components/StylizedBlockquote"
 import ResumeThumb from "../assets/homepage/thumbnail-resume.jpg"
 import VideosThumb from "../assets/homepage/thumbnail-videos.jpg"
 import StoreThumb from "../assets/homepage/thumbnail-store.jpg"
-import EducatorThumb from "../assets/homepage/thumbnail-lyrics.jpg"
+import EducatorThumb from "../assets/homepage/thumbnail-lyrics.png"
+import breakpoints from  "../styles/theme.js"
 
 const Home = () => (
   <Layout title="Billy B Home Page">
@@ -38,10 +39,12 @@ const Home = () => (
             fontSize: "1.375rem",
             lineHeight: 1.181818,
             fontWeight: 300,
+            fontSize: "2.25rem",
             // textAlign: "center",
             backgroundColor: theme.white,
             color: theme.black,
             gridColumn: "1/2",
+            [breakpoints.mobile]: {fontSize: "1.5rem",},
           }}
         >
           <p>
