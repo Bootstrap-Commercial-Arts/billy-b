@@ -21,6 +21,7 @@ const Layout = props => {
       <div
         css={{
           backgroundColor: theme.mediumBlue,
+          minHeight: "100vh",
           color: theme.white,
           padding: "2rem 3rem",
           [theme.mobile]: {
@@ -30,7 +31,6 @@ const Layout = props => {
       >
         <div
           css={{
-            maxWidth: 980,
             margin: "0 auto",
           }}
         >
@@ -40,7 +40,6 @@ const Layout = props => {
             css={{
               backgroundColor: theme.darkBlue,
               padding: "0 0 2rem",
-              minHeight: "100vh",
             }}
           >
             {props.children}

@@ -18,6 +18,7 @@ const colors = {
 }
 
 const breakpoints = {
+    extraLarge: "@media (min-width:1200px)",
     desktop: "@media (max-width: 1024px)",
     mobile: "@media (max-width: 680px)",
 }
@@ -34,7 +35,7 @@ export const globalStyles = [
     normalize,
     {
         html: {
-            fontSize: "14px",
+            fontSize: "1vw",
             fontFamily: fontFamily,
             fontStyle: "normal",
             lineHeight: 1.25,
@@ -49,6 +50,7 @@ export const globalStyles = [
             // VERIFY SIZING
             // [breakpoints.desktop]: { fontSize: "1.5vw" },
             [breakpoints.mobile]: { fontSize: "2.5vw" },
+            [breakpoints.extraLarge]: {fontSize:"12px" },
         },
         body: {
             margin: 0,
@@ -84,6 +86,9 @@ export const globalStyles = [
         ".column": {
             flex: 1,
             padding: "1rem",
+        },
+        ".row, .flex-row, .grid-row": {
+            [breakpoints.extraLarge]: { width: "1200px", margin: "0 auto" },
         },
     },
 ]
