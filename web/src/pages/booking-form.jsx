@@ -95,6 +95,7 @@ const BookingPage = () => (
         method="POST"
         data-netlify="true"
         action="/thank-you"
+        data-netlify-honeypot="bot-field"
         css={{
           width: "83.333333%",
           margin: "3rem auto 0",
@@ -106,7 +107,7 @@ const BookingPage = () => (
           <input type="radio" id="dc" css={{ height: "2rem" }} />
         </div> */}
         <div css={{ margin: "2rem 0" }}>
-          <input type="hidden" name="booking-form" value="Booking Form" />
+          <input type="hidden" name="form-name" value="booking-form" />
 
           <input
             type="name"
