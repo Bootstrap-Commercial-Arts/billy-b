@@ -18,8 +18,13 @@ const Footer = () => {
       >
         <div>
           <span>&#169;</span> 2016 Billy B Productions | Design and Development
-          by
-          <a href="https://www.bythebootstrap.us/">Bootstrap</a>
+          by 
+          <a
+          css={{
+            textDecoration: "none",
+            color: "#000000"
+          }}
+           href="https://www.bythebootstrap.us/">Bootstrap</a>
         </div>
       </div>
     </div>

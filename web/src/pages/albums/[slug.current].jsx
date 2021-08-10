@@ -53,14 +53,20 @@ const AlbumPage = ({ data }) => {
             <img
               src={album.albumCover.asset.url}
               css={{
-                height: "300px",
-                width: "300px",
+                height: "auto",
+                width: "100%",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
             />
           </div>
-          <div>
+          <div
+            css={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
             <div
               css={{
                 textTransform: "uppercase",
@@ -83,7 +89,7 @@ const AlbumPage = ({ data }) => {
               css={{
                 display: "flex",
                 marginTop: "2rem",
-                justifyContent: "flex-start",
+                justifyContent: "space-around",
                 [theme.mobile]: {
                   display: "grid",
                   gridTemplateRows: "1fr 1fr",

@@ -13,7 +13,7 @@ const ShowInfo = ({ guide, slug }) => (
     <div css={{ paddingLeft: "1rem" }}>
       <Link to={slug.current}>
         <div>
-          <img src={guide.coverImage.asset.url} alt="" css={{ width: 200 }} />
+          <img src={guide.coverImage.asset.url} alt="" css={{ width: "100%", }} />
         </div>
         <div
           css={{

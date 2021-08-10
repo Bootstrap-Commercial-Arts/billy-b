@@ -54,14 +54,20 @@ const SingleShowPage = ({ params, data }) => {
             <img
               src={show.guide.coverImage.asset.url}
               css={{
-                height: "150px",
-                width: "150px",
+                height: "auto",
+                width: "100%",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
             />
           </div>
-          <div>
+          <div
+            css={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
             <div
               css={{
                 textTransform: "uppercase",
@@ -87,14 +93,15 @@ const SingleShowPage = ({ params, data }) => {
                 marginBottom: "2.5rem",
               }}
             >
+              
+              <a href={show.guide.guide.asset.url} target="_blank">
               <Button
                 backgroundColor={theme.lightYellow}
                 textColor={theme.black}
               >
-                <a href={show.guide.guide.asset.url} target="_blank">
                   Teacher Guide
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
