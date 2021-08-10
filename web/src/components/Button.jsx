@@ -14,7 +14,7 @@ const Button = ({
       marginRight: "auto",
       borderRadius: 9999,
       color: textColor,
-      padding: "0.25rem 3rem",
+      padding: "0.75rem 3rem",
       borderStyle: "none",
       fontSize: "1.5rem",
       textDecoration: "none",

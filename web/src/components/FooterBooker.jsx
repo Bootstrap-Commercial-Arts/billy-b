@@ -34,7 +34,7 @@ const FooterBooker = () => (
           color: theme.white,
           marginLeft: "auto",
           marginRight: "auto",
-          padding: "0.25rem 3rem",
+          padding: "0.75rem 3rem",
           borderRadius: 9999,
           borderColor: theme.mediumBlue,
           borderStyle: "none",

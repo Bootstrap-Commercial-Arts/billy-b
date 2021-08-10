@@ -53,8 +53,8 @@ const AlbumPage = ({ data }) => {
             <img
               src={album.albumCover.asset.url}
               css={{
-                height: "150px",
-                width: "150px",
+                height: "300px",
+                width: "300px",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -94,26 +94,23 @@ const AlbumPage = ({ data }) => {
                 },
               }}
             >
-              <Button
+              
+              <a href={album.purchaseUrl} target="_blank" rel="noreferrer">
+                <Button
                 backgroundColor={theme.lightYellow}
                 textColor={theme.black}
-              >
-                <a href={album.purchaseUrl} target="_blank" rel="noreferrer">
+                >
                   Purchase Album
-                </a>
-              </Button>
-              <Button
+                </Button>
+              </a>
+              <a href={album.applePurchaseUrl} target="_blank" rel="noreferrer">
+                <Button
                 backgroundColor={theme.mediumBlue}
                 textColor={theme.black}
-              >
-                <a
-                  href={album.applePurchaseUrl}
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   Apple Music
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
