@@ -64,7 +64,7 @@ const AlbumPage = ({ data }) => {
             css={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
+              justifyContent: "center", 
             }}
           >
             <div
