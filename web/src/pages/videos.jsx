@@ -62,7 +62,7 @@ const VideosPage = () => (
 
 
 export default VideosPage
-
+/*
 // Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
 export default function MyComponent() {
