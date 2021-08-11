@@ -61,7 +61,7 @@ export default function MyComponent() {
         container.append(frame);
         target.append(container);
       }
-}
+};
   return (
     
     <Layout title="Billy B Videos Page">
