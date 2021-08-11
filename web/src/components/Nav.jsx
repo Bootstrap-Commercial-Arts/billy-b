@@ -24,12 +24,6 @@ const Nav = () => {
           border: "none",
           padding: "0.5rem 0 0 0",
           backgroundColor: theme.darkBlue,
-          width: "100vw",
-          height: "100vh",
-          position: "absolute",
-          zIndex: "999",
-          top:"0",
-          left: "0",
         }}
       >
         <HamburgerIcon
@@ -47,6 +41,12 @@ const Nav = () => {
       <div
         css={{
           alignItems: "center",
+          width: "100vw",
+          height: "100vh",
+          position: "absolute",
+          zIndex: "999",
+          top:"0",
+          left: "0",
         }}
       >
         <ul
