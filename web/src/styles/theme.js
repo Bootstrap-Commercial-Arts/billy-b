@@ -87,6 +87,9 @@ export const globalStyles = [
             flex: 1,
             padding: "1rem",
         },
+        "button:hover": {
+            filter: "brightness(0.8)",
+        }
         
     },
 ]
