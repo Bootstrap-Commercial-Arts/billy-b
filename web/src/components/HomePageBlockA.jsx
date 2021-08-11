@@ -45,7 +45,7 @@ const HomePageBlockA = ({
       <img
         src={image}
         css={{
-          width: "14rem",
+          width: "20rem",
         }}
       />
       <div>
@@ -64,6 +64,7 @@ const HomePageBlockA = ({
               textAlign: "center",
               marginTop: "1rem",
               justifyItems: "end",
+              marginBottom:"2rem",
             }}
           >
             <Link
@@ -71,9 +72,7 @@ const HomePageBlockA = ({
               css={{
                 backgroundColor: headerColor,
                 color: theme.black,
-                marginLeft: "auto",
-                marginRight: "auto",
-                padding: "0.25rem 3rem",
+                padding: "0.75rem 3rem",
                 borderRadius: 9999,
                 borderStyle: "none",
                 fontSize: "1rem",

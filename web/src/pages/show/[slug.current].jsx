@@ -72,8 +72,6 @@ const SingleShowPage = ({ params, data }) => {
               css={{
                 textTransform: "uppercase",
                 textAlign: "left",
-                marginLeft: "auto",
-                marginRight: "auto",
                 paddingTop: "3rem",
                 width: "80%",
                 fontSize: "2.25rem",

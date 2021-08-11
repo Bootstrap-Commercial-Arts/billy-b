@@ -44,7 +44,7 @@ const HomePageBlockB = ({
       <img
         src={image}
         css={{
-          width: "14rem",
+          width: "20rem",
           order: 2,
           gridColumn: "2/3",
           gridRow: "1/3",
@@ -76,6 +76,7 @@ const HomePageBlockB = ({
             order: 3,
             gridColumn: "1/2",
             gridRow: "2/3",
+            marginBottom:"2rem",
             [theme.mobile]: {
               order: 3,
             },
@@ -86,9 +87,7 @@ const HomePageBlockB = ({
             css={{
               backgroundColor: headerColor,
               color: theme.black,
-              marginLeft: "auto",
-              marginRight: "auto",
-              padding: "0.25rem 3rem",
+              padding: "0.75rem 3rem",
               borderRadius: 9999,
               borderStyle: "none",
               fontSize: "1rem",

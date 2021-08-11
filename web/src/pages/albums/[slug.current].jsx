@@ -83,7 +83,7 @@ const AlbumPage = ({ data }) => {
                 },
               }}
             >
-              {album.albumName} - {album.albumPrice}
+              {album.albumName}
             </div>
             <div
               css={{
