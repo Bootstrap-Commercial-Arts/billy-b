@@ -7,7 +7,13 @@ import Layout from "../components/Layout"
 import videosHero from "../assets/videos-hero.jpg"
 import theme from "../styles/theme"
 
-
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+export default function MyComponent() {
+  let loggedIn = false
+  if (isBrowser) {
+    window.localstorage.getItem("isLoggedIn") === "true"
+  }
       window.onload = () => {
         let apiUrl =
           "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLFszJqZtLxVnHCxHlnTHU468qPA1hHNRa&key=AIzaSyCbaV62f8OKSaU8hURXHixccwL4Vg7-Fe8";
@@ -40,7 +46,7 @@ import theme from "../styles/theme"
         container.append(frame);
         target.append(container);
       }
-
+}
 
 const VideosPage = () => {
   const [YTVideos, setYTVideos] = useState(testData)
