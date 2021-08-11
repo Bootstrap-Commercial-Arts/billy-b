@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+//import PropTypes from "prop-types"
+//import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 // import ExternalReferences from "../components/ExternalReferences"
 // import StatBlock from "../components/StatBlock"
@@ -49,7 +49,7 @@ export default function MyComponent() {
 }
 
 const VideosPage = () => {
-  const [YTVideos, setYTVideos] = useState(testData)
+  //const [YTVideos, setYTVideos] = useState(testData)
   // useEffect(() => {
 
   // }, [YTVideos])
