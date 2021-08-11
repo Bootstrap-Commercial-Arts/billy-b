@@ -129,7 +129,7 @@ const Home = () => (
           teacher guides for all of Billy B's work."
             image={EducatorThumb}
             linkText="Read More"
-            linkUrl="/shows/"
+            linkUrl="/show/"
             headerColor={theme.lightYellow}
             bodyColor={theme.darkYellow}
           />

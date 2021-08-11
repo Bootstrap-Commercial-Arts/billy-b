@@ -59,7 +59,7 @@ const BookingPage = () => (
           areaHeader="The DC Area"
           areaTitle="Artivate"
           areaPhone="Phone: 301-588-7525"
-          areaLink="https://www.goartivate.org"
+          areaLink="https://www.goartivate.org/artist/billy-b/"
         />
         <AreaBlock
           areaHeader="Connecticut Area"

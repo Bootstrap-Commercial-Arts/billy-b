@@ -42,11 +42,9 @@ const SingleShowPage = ({
             fontStyle: "italic",
           }}
         >
-          Enjoy Billy B’s extensive SHOW TEXT CAN GO HERE, with purchase links and lyrics
-          for every song! Lyrics for all of Billy B’s songs are available to
-          view, download, or print to use on your own or for your students. This
-          resource is very helpful for those who are deaf and hard of hearing,
-          speak English as a secong language, or if you just want to sing along!
+          Lyrics for all of Billy B's songs are available to view, download, or print to use on your own or for your students. This resource is very helpful for those who are deaf and hard of hearing, speak English as a second language, or if you just want to sing along!
+
+          Use these convenient teacher guides to add to the educational power of Billy B's performances. Guides include tools and resources like relevant vocabulary, pre- and post-performance activities, and reading list for each show.
         </p>
       </div>
       {/* LYRICS SECTION */}

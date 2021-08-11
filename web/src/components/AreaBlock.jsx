@@ -21,7 +21,7 @@ const AreaBlock = ({ areaHeader, areaTitle, areaPhone, areaLink }) => (
         fontSize: "1.5rem",
         fontWeight: 300,
         textTransform: "uppercase",
-        height: "4rem",
+        height: "2rem",
       }}
     >
       {areaHeader}

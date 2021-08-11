@@ -49,7 +49,7 @@ const StorePage = ({
         mobileBackgroundColor={theme.mediumBlue}
       >
         <a
-          href="https://www.apple.com/itunes/"
+          href="https://music.apple.com/us/artist/billy-b/260932831/see-all?section=full-albums"
           css={{ textDecoration: "none", color: theme.white }}
         >
           Billy B on Apple Music{" "}

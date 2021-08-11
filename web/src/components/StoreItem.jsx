@@ -10,7 +10,7 @@ const StoreItem = ({ image, name, price, handle }) => (
     }}
   >
     <div css={{ paddingLeft: "1rem" }}>
-      <a
+      <a css={{ fontSize: "1.5rem" }}
         href={`https://billybbrennanproductions.myshopify.com/products/${handle}`}
         target="_blank"
       >
@@ -32,7 +32,7 @@ const StoreItem = ({ image, name, price, handle }) => (
           {name}
         </div>
         <div
-          css={{ paddingTop: "0.5rem", fontWeight: 500, color: theme.white }}
+          css={{ paddingTop: "0.5rem", fontWeight: 500, color: theme.mediumYellow }}
         >
           ${price}
         </div>
