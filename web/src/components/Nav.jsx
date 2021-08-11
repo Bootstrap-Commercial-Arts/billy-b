@@ -131,6 +131,10 @@ const SmallNav = () => (
     css={{
       width: "100vw",
       height: "100vh",
+      position: "absolute",
+      zIndex: "999",
+      top:"0",
+      left: "0",
       display: "grid",
       alignContent: "space-between",
       gridTemplateRows: "1fr 1fr 1fr 1fr 1fr",

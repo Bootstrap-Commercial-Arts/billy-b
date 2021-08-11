@@ -19,7 +19,8 @@ const ShowInfo = ({ guide, slug }) => (
           css={{
             paddingTop: "0.5rem",
             fontWeight: 500,
-            color: theme.black,
+            color: theme.white,
+            fontSize: "1.5rem",
           }}
         >
           {guide.title}
