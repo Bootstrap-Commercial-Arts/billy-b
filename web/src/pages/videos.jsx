@@ -7,7 +7,7 @@ import Layout from "../components/Layout"
 import videosHero from "../assets/videos-hero.jpg"
 import theme from "../styles/theme"
 
-const VideosPage = () => {
+const VideosPage = () => (
   //const [YTVideos, setYTVideos] = useState(testData)
   // useEffect(() => {
 
@@ -22,7 +22,48 @@ const VideosPage = () => {
   }
   loadData()*/
   
-  // Check if window is defined (so if in the browser or in node.js).
+  
+
+    
+    <Layout title="Billy B Videos Page">
+      <img
+        src={videosHero}
+        width="max-content"
+        css={{
+          position: "relative",
+          objectFit: "cover",
+          display: "block",
+          maxWidth: "100%",
+        }}
+      />
+
+      <div id="target"
+        css={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          margin: "2rem",
+          [theme.mobile]: {
+            display: "block",
+            marginRight: 0,
+            marginLeft: 0,
+          },
+        }}
+      >
+
+
+        
+        
+
+        
+      </div>
+      
+    </Layout>
+  )
+
+
+export default VideosPage
+
+// Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
 export default function MyComponent() {
   let loggedIn = false
@@ -62,36 +103,8 @@ export default function MyComponent() {
         target.append(container);
       }
 };
-  return (
-    
-    <Layout title="Billy B Videos Page">
-      <img
-        src={videosHero}
-        width="max-content"
-        css={{
-          position: "relative",
-          objectFit: "cover",
-          display: "block",
-          maxWidth: "100%",
-        }}
-      />
 
-      <div id="target"
-        css={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          margin: "2rem",
-          [theme.mobile]: {
-            display: "block",
-            marginRight: 0,
-            marginLeft: 0,
-          },
-        }}
-      >
-
-
-        
-        {/* COPYPASTE FROM HERE TO NEXT COMMENT TO ADD A NEW VIDEO }
+/* COPYPASTE FROM HERE TO NEXT COMMENT TO ADD A NEW VIDEO }
         {YTVideos.items.map(video => {
           return (
             <div
@@ -124,13 +137,4 @@ export default function MyComponent() {
             </div>
           )
         })}
-        { TO HERE */}
-
-        
-      </div>
-      
-    </Layout>
-  )
-}
-
-export default VideosPage
+        { TO HERE */
