@@ -41,12 +41,6 @@ const Nav = () => {
       <div
         css={{
           alignItems: "center",
-          width: "100vw",
-          height: "100vh",
-          position: "absolute",
-          zIndex: "999",
-          top:"0",
-          left: "0",
         }}
       >
         <ul
