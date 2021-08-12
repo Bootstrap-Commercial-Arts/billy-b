@@ -39,6 +39,7 @@ const HomePageBlockA = ({
           gridTemplateColumns: "none",
           textAlign: "center",
           justifyItems: "center",
+          padding: "1rem",
         },
       }}
     >

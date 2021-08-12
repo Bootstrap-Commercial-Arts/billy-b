@@ -38,6 +38,7 @@ const HomePageBlockB = ({
         [theme.mobile]: {
           display: "block",
           textAlign: "center",
+          padding: "1rem",
         },
       }}
     >
