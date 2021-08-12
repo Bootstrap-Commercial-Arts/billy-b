@@ -18,6 +18,7 @@ const Nav = () => {
         },
       }}
     >
+    {open && <SmallNav />}
       <button
         onClick={toggle}
         css={{
@@ -36,7 +37,7 @@ const Nav = () => {
             },
           }}
         />
-        {open && <SmallNav />}
+        
       </button>
       <div
         css={{
@@ -126,7 +127,7 @@ const SmallNav = () => (
     css={{
       display: "grid",
       alignContent: "space-between",
-      gridTemplateRows: "1fr 1fr 1fr 1fr 1fr",
+      gridTemplateRows: "auto",
       backgroundColor: theme.darkBlue,
       alignContent: "center",
       justifyItems: "center",
