@@ -6,6 +6,22 @@ import Layout from "../components/Layout"
 // import StatBlock from "../components/StatBlock"
 import videosHero from "../assets/videos-hero.jpg"
 import theme from "../styles/theme"
+import React from "react";
+import {Helmet} from "react-helmet";
+
+class Application extends React.Component {
+  render () {
+    return (
+        <div className="application">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <script src="../assets/video-page/YT-script.js" type="text/javascript" />
+            </Helmet>
+            ...
+        </div>
+    );
+  }
+};
 
 const VideosPage = () => (
   //const [YTVideos, setYTVideos] = useState(testData)
