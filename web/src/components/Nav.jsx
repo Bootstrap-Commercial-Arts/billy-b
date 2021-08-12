@@ -54,12 +54,7 @@ const Nav = () => {
             fontSize: "2rem",
             listStyle: "none",
             textTransform: "uppercase",
-            //position: "absolute",
-            //top: "0",
-            //left: "0",
-            //zIndex: "1000",
-            //width: "100vw",
-            //height: "80vh",
+            
             li: {
               paddingLeft: "auto",
               paddingRight: "auto",
@@ -141,6 +136,12 @@ const SmallNav = () => (
       fontWeight: 700,
       listStyle: "none",
       textTransform: "uppercase",
+      position: "fixed",
+      top: "0",
+      left: "0",
+      zIndex: "1000",
+      width: "100vw",
+      height: "100vh",
       li: {
         paddingLeft: "auto",
         paddingRight: "auto",
