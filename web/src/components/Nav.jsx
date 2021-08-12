@@ -159,24 +159,6 @@ const SmallNav = () => (
     }}
   >
     <li>
-    <button
-        onClick={toggle}
-        css={{
-          border: "none",
-          padding: "0.5rem 0 0 0",
-          backgroundColor: theme.darkBlue,
-        }}
-      >
-        <HamburgerIcon
-          close={open}
-          css={{
-            margin: "0 auto",
-          }}
-        />
-        
-      </button>
-    </li>
-    <li>
       <Link to="/">Home</Link>
     </li>
     <li>
