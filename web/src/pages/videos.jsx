@@ -6,21 +6,16 @@ import Layout from "../components/Layout"
 // import StatBlock from "../components/StatBlock"
 import videosHero from "../assets/videos-hero.jpg"
 import theme from "../styles/theme"
-import React from "react";
-import {Helmet} from "react-helmet";
 
-class Application extends React.Component {
-  render () {
-    return (
-        <div className="application">
-            <Helmet>
-                <meta charSet="utf-8" />
-                <script src="" type="text/javascript" />
-            </Helmet>
-        </div>
-    );
-  }
-};
+
+componentDidMount () {
+  const script = document.createElement("script");
+
+  script.src = "https://use.typekit.net/foobar.js";
+  script.async = true;
+
+  document.body.appendChild(script);
+}
 
 const VideosPage = () => (
   
