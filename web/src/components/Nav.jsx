@@ -133,7 +133,7 @@ const SmallNav = () => (
       justifyItems: "center",
       margin: 0,
       padding: "0.5rem",
-      fontSize: "1rem",
+      fontSize: "2.5rem",
       fontWeight: 700,
       listStyle: "none",
       textTransform: "uppercase",
@@ -146,7 +146,7 @@ const SmallNav = () => (
       li: {
         paddingLeft: "auto",
         paddingRight: "auto",
-        marginBottom: "0.25rem",
+        marginBottom: "2.25rem",
         color: theme.white,
       },
       a: {
@@ -158,6 +158,24 @@ const SmallNav = () => (
       },
     }}
   >
+    <li>
+    <button
+        onClick={toggle}
+        css={{
+          border: "none",
+          padding: "0.5rem 0 0 0",
+          backgroundColor: theme.darkBlue,
+        }}
+      >
+        <HamburgerIcon
+          open={close}
+          css={{
+            margin: "0 auto",
+          }}
+        />
+        
+      </button>
+    </li>
     <li>
       <Link to="/">Home</Link>
     </li>
