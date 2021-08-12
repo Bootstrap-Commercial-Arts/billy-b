@@ -168,7 +168,7 @@ const SmallNav = () => (
         }}
       >
         <HamburgerIcon
-          open={close}
+          close={open}
           css={{
             margin: "0 auto",
           }}
