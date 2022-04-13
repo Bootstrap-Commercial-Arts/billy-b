@@ -6,7 +6,7 @@ import theme from "../styles/theme"
 import Button from "../components/Button"
 import { Link } from "gatsby"
 
-const SingleShowPage = ({
+const ShowPage = ({
   data: {
     page: { shows },
   },
@@ -78,7 +78,7 @@ const SingleShowPage = ({
   </Layout>
 )
 
-export default SingleShowPage
+export default ShowPage
 
 export const query = graphql`
 {

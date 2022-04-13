@@ -8,8 +8,8 @@ import Button from "../../components/Button"
 import Accordion from "../../components/Accordion"
 // NOTE: STUBBED PAGE UNTIL DECISION IS MADE TO ACCEPT ALBUM DATA FROM SANITY
 const SingleShowPage = ({ params, data }) => {
-  const show = data.show
-
+  const show = data.sanityShows
+ console.log(data, params)
   return (
     <Layout title="Billy B Shows Page">
       <img
@@ -91,12 +91,11 @@ const SingleShowPage = ({ params, data }) => {
                 marginBottom: "2.5rem",
               }}
             >
-              
               <a href={show.guide.guide.asset.url} target="_blank">
-              <Button
-                backgroundColor={theme.lightYellow}
-                textColor={theme.black}
-              >
+                <Button
+                  backgroundColor={theme.lightYellow}
+                  textColor={theme.black}
+                >
                   Teacher Guide
                 </Button>
               </a>
@@ -128,28 +127,33 @@ const SingleShowPage = ({ params, data }) => {
 export default SingleShowPage
 
 export const query = graphql`
-  query($eq: String) {
-    show: sanityShows(slug: { current: { eq: $eq } }) {
-      guide {
-        coverImage {
-          asset {
-            url
-          }
-        }
-        title
-        guide {
-          asset {
-            url
-          }
-        }
-      }
-      title
-      id
-      songs {
-        lyricContent: _rawLyricContent(resolveReferences: { maxDepth: 10 })
-        id
-        title
-      }
-    }
-  }
-`
+         query($id: String!) {
+          sanityShows(id: { eq: $id }) {
+             guide {
+               coverImage {
+                 asset {
+                   url
+                 }
+               }
+               title
+               guide {
+                 asset {
+                   url
+                 }
+               }
+             }
+             slug {
+               current
+             }
+             title
+             id
+             songs {
+               lyricContent: _rawLyricContent(
+                 resolveReferences: { maxDepth: 10 }
+               )
+               id
+               title
+             }
+           }
+         }
+       `

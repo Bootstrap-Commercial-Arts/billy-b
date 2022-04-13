@@ -8,8 +8,9 @@ import theme from "../../styles/theme"
 import Button from "../../components/Button"
 import Accordion from "../../components/Accordion"
 // NOTE: STUBBED PAGE UNTIL DECISION IS MADE TO ACCEPT ALBUM DATA FROM SANITY
-const AlbumPage = ({ data }) => {
-  const album = data.album
+const SingleAlbumPage = ({ data }) => {
+
+  const album = data.sanityAlbums
   return (
     <Layout title="Billy B Album Page">
       <img
@@ -64,7 +65,7 @@ const AlbumPage = ({ data }) => {
             css={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center", 
+              justifyContent: "center",
             }}
           >
             <div
@@ -100,19 +101,18 @@ const AlbumPage = ({ data }) => {
                 },
               }}
             >
-              
               <a href={album.purchaseUrl} target="_blank" rel="noreferrer">
                 <Button
-                backgroundColor={theme.lightYellow}
-                textColor={theme.black}
+                  backgroundColor={theme.lightYellow}
+                  textColor={theme.black}
                 >
                   Purchase Album
                 </Button>
               </a>
               <a href={album.applePurchaseUrl} target="_blank" rel="noreferrer">
                 <Button
-                backgroundColor={theme.mediumBlue}
-                textColor={theme.black}
+                  backgroundColor={theme.mediumBlue}
+                  textColor={theme.black}
                 >
                   Apple Music
                 </Button>
@@ -143,7 +143,7 @@ const AlbumPage = ({ data }) => {
   )
 }
 
-export default AlbumPage
+export default SingleAlbumPage
 
 // query($clientId: String!) {
 //     clients(id: { eq: $clientId }) {
@@ -153,8 +153,8 @@ export default AlbumPage
 //     }
 //   }
 export const query = graphql`
-         query($eq: String) {
-           album: sanityAlbums(slug: { current: { eq: $eq } }) {
+         query($id: String!) {
+           sanityAlbums(id: { eq: $id }) {
              albumCover {
                asset {
                  fluid {
