@@ -12,16 +12,7 @@ const SingleShowPage = ({ params, data }) => {
  console.log(data, params)
   return (
     <Layout title="Billy B Shows Page">
-      <img
-        src={showHero}
-        width="max-content"
-        css={{
-          position: "relative",
-          objectFit: "cover",
-          display: "block",
-          maxWidth: "100%",
-        }}
-      />
+      
 
       <div
         css={{
